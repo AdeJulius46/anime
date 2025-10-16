@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useRef } from 'react'
 import { useInView, motion} from 'framer-motion'
 const About = () => {
