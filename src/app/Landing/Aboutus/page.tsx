@@ -1,4 +1,4 @@
-import React from 'react'
+`useRef`
 import { useRef } from 'react'
 import { useInView, motion} from 'framer-motion'
 const About = () => {
