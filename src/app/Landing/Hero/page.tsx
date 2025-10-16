@@ -18,7 +18,7 @@ const Hero = () => {
          initial={{ scale: 1.2}}
         animate={{ scale: 1 }}
         transition={{
-          duration:1,
+          duration:2,
           ease: [0.25, 1, 0.5, 1], // smooth cinematic ease
         }}
       className="sticky scrollbar-hide top-0 h-screen bg-[url('/landing.png')] bg-cover bg-center bg-no-repeat flex items-center"
