@@ -1,17 +1,15 @@
-"use client";
+"use client"
 import React, { use } from "react";
-import { motion, MotionValue, useTransform } from "framer-motion";
+import { motion, MotionValue, useTransform,useScroll } from "framer-motion";
 
-// ✅ Define the prop type for scrollYProgress
-interface HeroProps {
-  scrollYProgress: MotionValue<number>;
-}
 
-const Hero: React.FC<HeroProps> = ({ scrollYProgress }) => {
+const Hero = () => {
   // Example scroll-based animation: fade & slight parallax
+ const { scrollYProgress } = useScroll();
 
-   const scale = useTransform(scrollYProgress,[0,1], [1, 0.1] )
-     const height = useTransform(scrollYProgress, [0, 1], ["100vh", "40vh"]);
+  const height = useTransform(scrollYProgress, [0, 1], ["100vh", "40vh"]);
+
+
   return (
     
 
