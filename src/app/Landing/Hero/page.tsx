@@ -42,7 +42,7 @@ const Hero = () => {
          initial={{ opacity: 0, y: 90 }} // starts lower and invisible
       animate={{ opacity: 1, y: 30 }}  // fades in and slides up
       transition={{
-        duration:3,  
+        duration:1,  
         delay:2,      // animation speed
         ease: "easeOut",    // smooth easing
       }}
