@@ -32,14 +32,16 @@ const partnershipItems = [
 
 export default function Ourpartner(){
   return (
-  <div  className='ml-20 w-full  h-[769px] mt-20  gap-[45px]'>
+  <div  className='w-full relative bg-[#fff]   h-[769px]  gap-[45px]'>
  <h2 className="ml-px h-[77px]  px-4 [font-family:'DM_Serif_Text',Helvetica] font-normal text-[#2c2c2c] text-[56px] text-center tracking-[0] leading-[normal] ">              Our Strategic Partnerships 
         </h2>
 
-        <div className="inline-flex w-[1352px] h-[647px] relative items-center gap-[46px]">
+        <div className="flex w-[1352px] h-screen items-center gap-[46px] ">
+          <div>
           <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=529" alt="Strategic partnerships" className="relative w-[529px] h-[647px] object-cover" />
+          </div>
 
-          <div className="flex flex-col w-[777px] items-start gap-[45px] relative">
+          <div className="flex flex-col w-[777px] items-start gap-[45px]  overflow-y-auto">
             {partnershipItems.map((item, index) => (
               <div
                 key={`partnership-${index}`}
@@ -65,6 +67,7 @@ export default function Ourpartner(){
               </div>
             ))}
           </div>
+
         </div>
         </div>
 

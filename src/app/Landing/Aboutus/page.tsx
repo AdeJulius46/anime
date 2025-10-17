@@ -1,10 +1,18 @@
 "use client"
 import { useRef } from 'react'
-import { useInView, motion} from 'framer-motion'
+import { useInView, motion,useScroll,useTransform} from 'framer-motion'
 const About = () => {
  const ref = useRef(null)
 
-   const isInView = useInView(ref, { once: true, margin: "-100px" }); //
+   const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+    const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.09, 1]);
+    const height = useTransform(scrollYProgress, [0, 0.5, 1], ["75vh", "85vh", "75vh"]);
 
   return (
     <div>
@@ -40,15 +48,45 @@ const About = () => {
           specialists, counselors, and peer support advocates, work tirelessly
           to ensure no Wyoming resident faces these challenges alone.
         </motion.p>
+        < motion.div
+          style={{ height,scale}}
+        >
+            <motion.img  
+            
+            className="ml-[-26px] w-[1204px] h-[703px] mt-[45px] bg-cover bg-[50%_50%]"  src={"/Frame2.png"}  
+               style={{height}}
+            />
 
-            <img   className="ml-[-26px] w-[1204px] h-[703px] mt-[45px] bg-cover bg-[50%_50%]"  src={"/Frame2.png"}     />
-        <p className="h-[68px] w-[852px] self-center mt-20 [font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg text-center tracking-[0] leading-[normal]">
+        </motion.div>
+
+        <motion.p 
+        initial={{ opacity: 0  }} // starts lower and invisible
+      animate={isInView ? { opacity: 1 } : {}}  // fades in and slides up
+      transition={{
+         delay: 3,                       // ⏳ wait 3 seconds before starting
+         duration: 1,                     // fade in over 1 second
+         ease: "easeInOut"    // smooth easing
+      }}
+        className="h-[68px] w-[852px] self-center mt-[150px]  mb-[40px][font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg text-center tracking-[0] leading-[normal]">
           We understand that recovery isn't just about overcoming addiction—it's
           about rebuilding lives, restoring families, and strengthening
           communities. We're committed to making recovery accessible to
           everyone, regardless of location, financial situation, or background.
-        </p>
-            <img   className="ml-[294px] w-[1178px] h-[703px] mt-[45px] bg-cover bg-[50%_50%]"  src={"/Frame3.png"}     />
+        </motion.p>
+
+
+
+              < motion.div
+          style={{ height,scale}}
+        >
+            <motion.img  
+            
+            className="ml-[294px] w-[1178px] h-[703px] mt-[45px] bg-cover bg-[50%_50%]"  src={"/Frame3.png"} 
+               style={{height}}
+            />
+
+        </motion.div>
+
 
       </section>  
     </div>

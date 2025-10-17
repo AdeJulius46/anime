@@ -7,19 +7,23 @@ import Header from "./Landing/Header/Header";
 import About from "./Landing/Aboutus/page";
 import Comprehensive from "./Landing/Comprehensive/page";
 import Hero from "./Landing/Hero/page";
+import Ourpartner from "./Landing/Ourpartnership/page";
+import Ourmission from "./Landing/Ourmission/page";
 export default function Home() {
 
 
   return (
-    <div className="relative h-[1000vh]">
+    <div className="relative  bg-[#fff]">
       <Header />
       {/* ✅ Correct prop name + syntax */}
       <Hero />
 
 
 
-      <section>
+      <section className="bg-[#ffff]">
         <About />
+        <Ourmission/>
+        <Ourpartner />
         <Comprehensive />
       </section>
     </div>

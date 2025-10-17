@@ -1,8 +1,7 @@
+"use client"
+import { motion } from "framer-motion";
+
 import React from 'react'
-
-
-
-
 const supportServices = [
   {
     number: "01",
@@ -25,8 +24,18 @@ const supportServices = [
 ];
 const Comprehensive = () => {
   return (
-    <div className='w-full  bg-[#fff] overflow-hidden '>
- <section className="w-full  h-[2149px] relative  w-full  bg-[#fff] ">
+    <motion.div
+                 initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1.2,
+          ease: [0.25, 1, 0.5, 1], // cubic-bezier easing for smooth motion
+        }}
+    className='w-full  bg-[#fff] overflow-hidden '>
+ <motion.section 
+
+ 
+ className="w-full h-[300vh] relative  bg-[#fff] ">
         <p className="absolute  mt-[40px]  top-[87px] left-[calc(50.00%_-_400px)] w-[800px] [font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg text-center tracking-[0] leading-[normal]">
           At Active in Recovery, we understand that navigating the path to
           recovery can be overwhelming. Our comprehensive services are
@@ -82,12 +91,12 @@ const Comprehensive = () => {
           alt="Line"
           src="/line-4.svg"
         />
-      </section> 
+      </motion.section> 
 
 
 
 
-    </div>
+    </motion.div>
   )
 }
 
