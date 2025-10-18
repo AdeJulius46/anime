@@ -27,7 +27,7 @@ const Hero = () => {
  
       <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-black/90 via-black/60 to-transparent rounded-b-lg" />
       {/* Hero content */}
-      <div className="px-[45px] mt-[390px] flex flex-col items-center justify-center text-white">
+      <div className=" flex flex-col items-center justify-center text-center text-white  mt-[390px] md:mt-[390px]  md:px-[45px]  ">
         <motion.h3 className="font-400 text-[24px]"
         initial={{ opacity: 0  }} // starts lower and invisible
       animate={{ opacity: 1}}  // fades in and slides up
@@ -39,7 +39,7 @@ const Hero = () => {
         >
           Empowering individuals to reduce stigma and build a stronger.
         </motion.h3>
-        <motion.h1 className="uppercase text-[126px] z-10"
+        <motion.h1 className="text-[30px]   uppercase md:text-[126px] z-10"
          initial={{ opacity: 0, y: 90 }} // starts lower and invisible
       animate={{ opacity: 1, y: 30 }}  // fades in and slides up
       transition={{
@@ -49,6 +49,7 @@ const Hero = () => {
       }}
         
         >Active in Recovery</motion.h1>
+
       </div>
     </motion.section>
   );

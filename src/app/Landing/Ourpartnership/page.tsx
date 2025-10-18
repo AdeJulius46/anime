@@ -66,14 +66,14 @@ export default function OurPartner() {
 
   return (
     <section className="relative w-full bg-white flex flex-col items-center py-16">
-      <h2 className="text-[56px] font-serif text-[#2c2c2c] text-center mb-16">
+      <h2 className=" text-[30px] md:text-[56px] font-serif text-[#2c2c2c] text-center mb-16">
         Our Strategic Partnerships
       </h2>
 
       <div className="relative flex w-full max-w-[1352px] gap-[46px]">
         {/* Left sticky image */}
         <div className="flex-1 flex justify-center">
-          <div className="sticky top-24 w-[529px] h-[647px]  overflow-hidden shadow-2xl">
+          <div className="sticky top-24 w-[529px] h-[647px] hidden md:flex  overflow-hidden shadow-2xl">
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeIndex}
@@ -86,7 +86,7 @@ export default function OurPartner() {
                   duration: 0.8,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="  absolute inset-0 w-full h-full object-cover"
               />
             </AnimatePresence>
           </div>
@@ -110,7 +110,7 @@ export default function OurPartner() {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col gap-2 min-h-[35vh]"
+              className="flex flex-col gap-2     md:min-h-[35vh]"
             >
               <h3 className="text-[32px] font-serif text-[#2c2c2c]">
                 {item.title}

@@ -23,8 +23,7 @@ export default function Home() {
 
   return (
     <div className="relative  bg-[#fff]">
-      <Header />
-      {/* ✅ Correct prop name + syntax */}
+      {/* <Header /> */}
       <Hero />
 
 
@@ -33,8 +32,8 @@ export default function Home() {
         <About />
         <Ourmission/>
         <Comprehensive />
-        <Ourpartner />
-      </section>
+        <Ourpartner /> 
+      </section> 
     </div>
   );
 }
