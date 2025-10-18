@@ -5,14 +5,12 @@ const About = () => {
  const ref = useRef(null)
 
    const isInView = useInView(ref, { once: true, margin: "-100px" })
-
     const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-
-   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.09, 1]);
-    const height = useTransform(scrollYProgress, [0, 0.5, 1], ["75vh", "85vh", "75vh"]);
+    const scaleY = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.15, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0.6, 1, 1, 0.6]);
 
   return (
     <div>
@@ -49,12 +47,15 @@ const About = () => {
           to ensure no Wyoming resident faces these challenges alone.
         </motion.p>
         < motion.div
-          style={{ height,scale}}
+        
         >
             <motion.img  
+              style={{   scaleY,
+          opacity,
+          originY: 0.5}}
             
             className="ml-[-26px] w-[1204px] h-[703px] mt-[45px] bg-cover bg-[50%_50%]"  src={"/Frame2.png"}  
-               style={{height}}
+             
             />
 
         </motion.div>
@@ -77,12 +78,15 @@ const About = () => {
 
 
               < motion.div
-          style={{ height,scale}}
+      
         >
             <motion.img  
+                style={{ scaleY,
+          opacity,
+          originY: 0.5}}
             
             className="ml-[294px] w-[1178px] h-[703px] mt-[45px] bg-cover bg-[50%_50%]"  src={"/Frame3.png"} 
-               style={{height}}
+          
             />
 
         </motion.div>

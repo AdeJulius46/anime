@@ -1,76 +1,130 @@
-import React from 'react'
+"use client";
 
-
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 
 const partnershipItems = [
   {
-    title: "Treatment Faculties",
+    title: "Treatment Facilities",
     description:
       "Creating seamless referral pathways with rehab centers and mental health facilities across Wyoming.",
-    opacity: "",
+    image:
+      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     title: "Healthcare Providers",
     description:
       "Working with doctors, nurses, therapists, and mental health professionals to ensure quality care throughout the recovery journey.",
-    opacity: "opacity-50",
+    image:
+      "https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     title: "Community Organizations",
     description:
       "Partnering with local groups to extend our reach into every Wyoming community, including faith-based organizations, schools, employers, and grassroots coalitions.",
-    opacity: "opacity-50",
+    image:
+      "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     title: "Government Agencies",
     description:
       "Collaborating with state and local agencies to improve access to services for all Wyoming residents.",
-    opacity: "opacity-50",
+    image:
+      "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
 ];
 
+export default function OurPartner() {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-export default function Ourpartner(){
+  // ✅ Properly typed ref for multiple div elements
+  const itemRefs = useRef<Array<HTMLDivElement | null>>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    itemRefs.current.forEach((ref, i) => {
+      if (!ref) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) setActiveIndex(i);
+          });
+        },
+        { threshold: 0.4 }
+      );
+
+      observer.observe(ref);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
   return (
-  <div  className='w-full relative bg-[#fff]   h-[769px]  gap-[45px]'>
- <h2 className="ml-px h-[77px]  px-4 [font-family:'DM_Serif_Text',Helvetica] font-normal text-[#2c2c2c] text-[56px] text-center tracking-[0] leading-[normal] ">              Our Strategic Partnerships 
-        </h2>
+    <section className="relative w-full bg-white flex flex-col items-center py-16">
+      <h2 className="text-[56px] font-serif text-[#2c2c2c] text-center mb-16">
+        Our Strategic Partnerships
+      </h2>
 
-        <div className="flex w-[1352px] h-screen items-center gap-[46px] ">
-          <div>
-          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=529" alt="Strategic partnerships" className="relative w-[529px] h-[647px] object-cover" />
+      <div className="relative flex w-full max-w-[1352px] gap-[46px]">
+        {/* Left sticky image */}
+        <div className="flex-1 flex justify-center">
+          <div className="sticky top-24 w-[529px] h-[647px]  overflow-hidden shadow-2xl">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={activeIndex}
+                src={partnershipItems[activeIndex].image}
+                alt={partnershipItems[activeIndex].title}
+                initial={{ opacity: 0, scale: 1.05, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.98, y: -20 }}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </AnimatePresence>
           </div>
-
-          <div className="flex flex-col w-[777px] items-start gap-[45px]  overflow-y-auto">
-            {partnershipItems.map((item, index) => (
-              <div
-                key={`partnership-${index}`}
-                className={`flex flex-col items-start gap-[25px] relative self-stretch w-full flex-[0_0_auto] ${item.opacity}`}
-              >
-                <div className="flex flex-col w-[641px] items-start gap-2.5 relative flex-[0_0_auto]">
-                  <h3 className="relative self-stretch mt-[-1.00px] [font-family:'DM_Serif_Text',Helvetica] font-normal text-[#2c2c2c] text-[32px] tracking-[0] leading-[normal]">
-                    {item.title}
-                  </h3>
-                  <p
-                    className={`relative self-stretch ${index === 2 ? "h-[86px]" : "h-[45px]"} [font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg tracking-[0] leading-[normal]`}
-                  >
-                    {item.description}
-                  </p>
-                </div>
-                {index < 3 && (
-                  <img
-                    className="relative self-stretch w-full h-px object-cover"
-                    alt="Line"
-                    src="/line-4-1.svg"
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-
-        </div>
         </div>
 
-
-  )
+        {/* Right content */}
+        <div className="w-[677px] flex flex-col space-y-2">
+          {partnershipItems.map((item, index) => (
+            <motion.div
+              key={index}
+              ref={(el: HTMLDivElement | null) => {
+                itemRefs.current[index] = el;
+              }}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{
+                opacity: activeIndex === index ? 1 : 0.25,
+                y: activeIndex === index ? 0 : 10,
+                scale: activeIndex === index ? 1 : 0.99,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="flex flex-col gap-2 min-h-[35vh]"
+            >
+              <h3 className="text-[32px] font-serif text-[#2c2c2c]">
+                {item.title}
+              </h3>
+              <p className="text-lg text-[#2c2c2c] leading-relaxed font-sora">
+                {item.description}
+              </p>
+              {index < partnershipItems.length - 1 && (
+                <div className="h-[1px] bg-gray-200 mt-6" />
+              )}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

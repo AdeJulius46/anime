@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useScroll } from "framer-motion";
 import Header from "./Landing/Header/Header";
 // import Hero from "./Landing/Hero";
@@ -9,7 +9,16 @@ import Comprehensive from "./Landing/Comprehensive/page";
 import Hero from "./Landing/Hero/page";
 import Ourpartner from "./Landing/Ourpartnership/page";
 import Ourmission from "./Landing/Ourmission/page";
+import Lenis from "lenis";
 export default function Home() {
+  useEffect(()=>{
+    const lenis = new Lenis();
+    function raf(time: any){
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf)
+  },[]);
 
 
   return (
@@ -23,8 +32,8 @@ export default function Home() {
       <section className="bg-[#ffff]">
         <About />
         <Ourmission/>
-        <Ourpartner />
         <Comprehensive />
+        <Ourpartner />
       </section>
     </div>
   );
