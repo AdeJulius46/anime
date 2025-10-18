@@ -27,7 +27,8 @@ body {
 }
 
 
-.scrollbar-hide-x {
+
+.scrollbar-hide {
     overflow-x: scroll;
 }
 .scrollbar-hide-x::-webkit-scrollbar {
@@ -36,7 +37,7 @@ body {
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none; 
-} */
+}
 
  ::-webkit-scrollbar {
   display: none;
