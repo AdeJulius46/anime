@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useInView, motion, useScroll, useTransform } from "framer-motion";
 
 const supportServices = [
   {
@@ -22,6 +22,8 @@ const supportServices = [
 
 const Comprehensive = () => {
   const containerRef = useRef(null);
+   const isInView = useInView(containerRef, { once: true, margin: "-100px" })
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
@@ -35,12 +37,26 @@ const Comprehensive = () => {
       >
         {/* Section Heading */}
         <motion.h2
+           initial={{ opacity: 0, filter: "blur(10px)" }}
+        animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
+        transition={{
+          duration: 1.5,
+          ease: "easeOut",
+        }}
+
           className="text-center font-serif  text-[#2c2c2c] text-[32px] md:text-[56px] mb-6"
         >
           Comprehensive Support Services
         </motion.h2>
 
         <motion.p
+        initial={{ opacity: 0  }} // starts lower and invisible
+      animate={isInView ? { opacity: 1 } : {}}  // fades in and slides up
+      transition={{
+         delay: 1,                       // ⏳ wait 3 seconds before starting
+         duration: 1,                     // fade in over 1 second
+         ease: "easeInOut"    // smooth easing
+      }}
           className="text-center  [font-family:'Sora',Helvetica] text-[14px]  text-[#2c2c2c] md:text-[18px] text-base md:text-lg max-w-2xl mb-16"
         >
           At Active in Recovery, we understand that navigating the path to

@@ -10,6 +10,7 @@ import Hero from "./Landing/Hero/page";
 import Ourpartner from "./Landing/Ourpartnership/page";
 import Ourmission from "./Landing/Ourmission/page";
 import Lenis from "lenis";
+import Footer from "./Landing/Folder/page";
 export default function Home() {
   useEffect(()=>{
     const lenis = new Lenis();
@@ -24,15 +25,16 @@ export default function Home() {
   return (
     <div className="relative  bg-[#fff]">
       {/* <Header /> */}
-      <Hero />
+      {/* <Hero /> */}
 
 
 
       <section className="bg-[#ffff]">
-        <About />
+        {/* <About />
         <Ourmission/>
         <Comprehensive />
-        <Ourpartner /> 
+        <Ourpartner />  */}
+        <Footer />
       </section> 
     </div>
   );
