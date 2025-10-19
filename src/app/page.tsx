@@ -11,6 +11,9 @@ import Ourpartner from "./Landing/Ourpartnership/page";
 import Ourmission from "./Landing/Ourmission/page";
 import Lenis from "lenis";
 import Footer from "./Landing/Footer/page";
+import Building from "./Landing/Building/page";
+import Advocating from "./Landing/Advocating/page";
+import Believe from "./Landing/Believe/page";
 export default function Home() {
   useEffect(()=>{
     const lenis = new Lenis();
@@ -28,13 +31,17 @@ export default function Home() {
       <Hero />
 
 
-
       <section className="bg-[#ffff]">
-        <About />
+
+        {/* <Building /> */}
+        
+      <About /> 
         <Ourmission/>
         <Comprehensive />
         <Ourpartner /> 
-        <Footer />
+        <Believe />
+        <Advocating />
+        <Footer /> 
       </section> 
     </div>
   );

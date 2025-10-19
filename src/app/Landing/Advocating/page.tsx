@@ -5,36 +5,30 @@ import React, { useEffect, useRef, useState } from "react";
 
 const partnershipItems = [
   {
-    title: "Treatment Facilities",
+    title: "Funding Initiatives",
     description:
-      "Creating seamless referral pathways with rehab centers and mental health facilities across Wyoming.",
+      "Advocating for increased public and private funding for substance abuse and mental health programs throughout Wyoming. ",
     image:
-      "/Frame 14.png",
+      "/Frame 14 (4).png",
   },
   {
-    title: "Healthcare Providers",
+    title: "Educational Campaigns",
     description:
-      "Working with doctors, nurses, therapists, and mental health professionals to ensure quality care throughout the recovery journey.",
+      "Creating awareness campaigns that reduce stigma and promote understanding of addiction and mental health disorders. ",
     image:
-      "/Frame 14 (1).png",
+      "/Frame 14 (5).png",
   },
   {
-    title: "Community Organizations",
+    title: "Community Mobilization",
     description:
-      "Partnering with local groups to extend our reach into every Wyoming community, including faith-based organizations, schools, employers, and grassroots coalitions.",
+      "Engaging communities across Wyoming to support recovery initiatives and create welcoming environments for those in recovery. ",
     image:
-      "/Frame 14 (2).png",
+      "/Frame 14 (6).png",
   },
-  {
-    title: "Government Agencies",
-    description:
-      "Collaborating with state and local agencies to improve access to services for all Wyoming residents.",
-    image:
-      "/Frame 14 (3).png",
-  },
+
 ];
 
-export default function OurPartner() {
+export default function Advocating() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   // ✅ Properly typed ref for multiple div elements
@@ -66,14 +60,14 @@ export default function OurPartner() {
 
   return (
     <section className="relative w-full bg-white flex flex-col items-center py-16">
-      <h2 className=" text-[30px] w-64  md:w-full  md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
-        Our Strategic Partnerships
+      <h2 className=" text-[30px]    md:w-full  md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
+       Advocating for Change
       </h2>
 
-      <div className="relative flex w-full max-w-[1352px] gap-[46px]">
+      <div className="relative flex w-full max-w-[1352px] gap-[26px]">
         {/* Left sticky image */}
         <div className="flex-1 flex justify-center">
-          <div className="sticky top-24 w-[529px] h-[647px] hidden md:flex  overflow-hidden ">
+          <div className="sticky top-24 w-[529px] h-[537px] hidden md:flex  overflow-hidden ">
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeIndex}
@@ -110,7 +104,7 @@ export default function OurPartner() {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col gap-2     md:min-h-[35vh]"
+              className="flex flex-col gap-2  h-35vh   md:min-h-[35vh]"
             >
               <h3 className="text-[20px] md:text-[32px] font-serif text-[#2c2c2c]">
                 {item.title}
