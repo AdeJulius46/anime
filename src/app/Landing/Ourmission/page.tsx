@@ -37,28 +37,28 @@ function OurMission() {
   return (
     <div ref={sectionRef} className="w-full bg-white relative ">
       <section className="max-w-7xl mx-auto ">
-        <h2 className="text-center font-['DM_Serif_Text'] text-[#2c2c2c] text-[36px] md:text-[56px] mb-16">
+        <h2 className="text-center  px-4 md:px-0 py-[20px] md:py-[50px] font-serif  font-[600] text-[#2d2d2d] text-[32px] md:text-[56px] md:mb-16">
           Our Mission &amp; Vision
         </h2>
 
-        <div className="flex flex-col   space-y-24 px-4 md:px-0">
+        <div className="flex flex-col space-y-[30px]   md:space-y-24 px-4 md:px-0">
           {missionItems.map((item, index) => (
             <div
               key={index}
               className="flex  flex-col  md:flex-row  gap-10"
             >
               {/* Text content */}
-              <div className="flex-1">
-                <h3 className="font-['DM_Serif_Text'] text-[#2c2c2c] text-[32px] md:text-[47px] ">
+              <div className="flex-1 px-4 md:px-0">
+                <h3 className="font-serif font-[500] text-[#2d2d2d] text-[20px] md:text-[47px] ">
                   {item.title}
                 </h3>
-                <p className="font-['Sora'] text-[#2c2c2c]  md:text-lg max-w-md mx-auto md:mx-0">
+                <p className="font-['Sora'] text-[#2c2c2c]  text-[14px]    md:text-[18px]  md:text-lg max-w-md mx-auto md:mx-0">
                   {item.description}
                 </p>
               </div>
 
               {/* Image + icon */}
-              <div className="relative flex-1 flex justify-center md:justify-end">
+              <div className="relative flex-1 flex justify-center md:justify-end px-4 md:px-0">
                 <motion.img
                   src={item.imageSrc}
                   alt={item.title}
@@ -71,7 +71,7 @@ function OurMission() {
                 <img
                   src={item.iconSrc}
                   alt={`${item.title} icon`}
-                  className="hidden md:block absolute bottom-[-10px] left-[-270px] w-[200px] h-[150px] object-contain"
+                  className="hidden md:block absolute bottom-[-10px] left-[-375px] w-[316px] h-[246px] object-contain"
                 />
               </div>
               

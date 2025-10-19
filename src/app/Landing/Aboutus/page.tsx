@@ -25,7 +25,7 @@ const About = () => {
           ease: "easeOut",
         }}
         
-        className="  mt-[60px]  self-center [font-family:'DM_Serif_Text',Helvetica] font-normal text-[#2c2c2c] text-[56px] text-center tracking-[0] leading-[normal]">
+        className="  mt-[60px]  self-center font-serif    font-normal text-[#2c2c2c] text-[32px]  md:text-[56px] text-center tracking-[0] leading-[normal]">
           About Us
         </motion.h1>
 
@@ -39,7 +39,7 @@ const About = () => {
          ease: "easeInOut"    // smooth easing
       }}
         
-        className="h-[92px] md:w-[800px] self-center mt-2.5  px-4 mb-[60px] [font-family:'Sora',Helvetica] font-normal text-[#2D2D2D] text-lg text-center tracking-[0] leading-[normal]">
+        className="h-[92px] md:w-[800px] text-[14px] px-8 text-start md:text-center  md:text-[18px] self-center mt-2.5  px-4 mb-[60px] [font-family:'Sora',Helvetica] font-[400] text-[#2D2D2D] text-lg text-center tracking-[0] leading-[normal]">
           Since our founding, we've been dedicated to bridging the gap between
           those struggling with addiction and the life-changing resources that
           can help them heal. Our statewide network of resources and recovery
@@ -54,7 +54,7 @@ const About = () => {
           opacity,
           originY: 0.5}}
             
-            className="ml-[-26px] w-[1204px] md:h-[703px] mt-[45px] bg-cover bg-[50%_50%]"  src={"/Frame2.png"}  
+            className="ml-[-26px] w-[1204px] md:h-[703px] mt-[25px] bg-cover bg-[50%_50%]"  src={"/Frame2.png"}  
              
             />
 
@@ -68,7 +68,7 @@ const About = () => {
          duration: 1,                     // fade in over 1 second
          ease: "easeInOut"    // smooth easing
       }}
-        className="  px-4  h-[68px] md:w-[852px] self-center mt-[90px]  mb-[40px][font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg text-center tracking-[0] leading-[normal]">
+        className="  md:px-4 text-[14px] px-8 text-start md:text-center  md:text-[18px] h-[68px] md:w-[852px] self-center mt-[40px] md:mt-[110px]   md:mb-[40px] [font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg text-center tracking-[0] leading-[normal]">
           We understand that recovery isn't just about overcoming addiction—it's
           about rebuilding lives, restoring families, and strengthening
           communities. We're committed to making recovery accessible to
@@ -86,7 +86,7 @@ const About = () => {
           opacity,
           originY: 0.5}}
             
-            className=" ml-[30px] md:ml-[294px] w-[1178px] md:h-[703px] mt-[45px] bg-cover bg-[50%_50%]"  src={"/Frame3.png"} 
+            className=" ml-[30px] md:ml-[294px]  w-[1178px] md:h-[703px] mt-[20px] md:mt-[35px] bg-cover bg-[50%_50%]"  src={"/Frame3.png"} 
           
             />
 
