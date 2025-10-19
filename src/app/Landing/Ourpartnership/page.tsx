@@ -66,7 +66,7 @@ export default function OurPartner() {
 
   return (
     <section className="relative w-full bg-white flex flex-col items-center py-16">
-      <h2 className=" text-[30px] md:text-[56px] font-serif text-[#2c2c2c] text-center mb-16">
+      <h2 className=" text-[30px] w-64  md:w-full  md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
         Our Strategic Partnerships
       </h2>
 
@@ -112,10 +112,10 @@ export default function OurPartner() {
               }}
               className="flex flex-col gap-2     md:min-h-[35vh]"
             >
-              <h3 className="text-[32px] font-serif text-[#2c2c2c]">
+              <h3 className="text-[20px] md:text-[32px] font-serif text-[#2c2c2c]">
                 {item.title}
               </h3>
-              <p className="text-lg text-[#2c2c2c] leading-relaxed font-sora">
+              <p className="text-[14px] md:text-[18px] text-[#2c2c2c] leading-relaxed [font-family:'Sora',Helvetica] px-2">
                 {item.description}
               </p>
               {index < partnershipItems.length - 1 && (

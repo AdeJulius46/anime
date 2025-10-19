@@ -35,13 +35,13 @@ const Comprehensive = () => {
       >
         {/* Section Heading */}
         <motion.h2
-          className="text-center font-['DM_Serif_Text'] text-[#2c2c2c] text-[36px] md:text-[56px] mb-6"
+          className="text-center font-serif  text-[#2c2c2c] text-[32px] md:text-[56px] mb-6"
         >
           Comprehensive Support Services
         </motion.h2>
 
         <motion.p
-          className="text-center font-['Sora'] text-[#2c2c2c] text-base md:text-lg max-w-2xl mb-16"
+          className="text-center  [font-family:'Sora',Helvetica] text-[14px]  text-[#2c2c2c] md:text-[18px] text-base md:text-lg max-w-2xl mb-16"
         >
           At Active in Recovery, we understand that navigating the path to
           recovery can be overwhelming. Our comprehensive services are accessible
@@ -69,16 +69,17 @@ const Comprehensive = () => {
               <motion.div
                 key={`service-${index}`}
                 style={{ y, opacity, scale }}
-                className={`flex flex-col md:flex-row py-[15px]  md:py-[20px]`}
+                className={`flex flex-col  border-t border-t-black  md:flex-row  py-6`}
               >
                 {/* Text Section */}
-                <div className="flex-1 flex flex-col  md:items-start text-center md:text-left space-y-4">
+                <div className="flex-1  gap-2   flex md:items-start text-center md:text-left space-y-4">
                   <span className="font-['Sora'] text-[#2c2c2c] text-2xl">
                     {service.number}
-                  </span>
-                  <h3 className="font-['DM_Serif_Text'] text-[#2c2c2c] text-[32px] md:text-[47px] leading-tight">
+                  </span> 
+                  <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[47px] leading-tight">
                     {service.title}
                   </h3>
+                  
                 </div>
 
                 {/* Image */}

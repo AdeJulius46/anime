@@ -52,7 +52,7 @@ function OurMission() {
                 <h3 className="font-serif font-[500] text-[#2d2d2d] text-[20px] md:text-[47px] ">
                   {item.title}
                 </h3>
-                <p className="font-['Sora'] text-[#2c2c2c]  text-[14px]    md:text-[18px]  md:text-lg max-w-md mx-auto md:mx-0">
+                <p className=" [font-family:'Sora',Helvetica]   text-[#2c2c2c]  text-[14px]    md:text-[18px]  md:text-lg max-w-md mx-auto md:mx-0">
                   {item.description}
                 </p>
               </div>
