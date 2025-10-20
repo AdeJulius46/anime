@@ -14,8 +14,9 @@ const Believe = () => {
 
   return (
     <div>
-         <section className="  w-full  bg-[#fff] relative   flex flex-col overflow-hidden "
+         <section className="w-full  bg-[#fff] relative   flex flex-col overflow-hidden "
             ref={ref}
+              id="white-section"
          >
         {/* < motion.h1 
         initial={{ opacity: 0, filter: "blur(10px)" }}

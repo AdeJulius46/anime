@@ -1,101 +1,89 @@
-"use client"
-import { useRef } from 'react'
-import { useInView, motion,useScroll,useTransform} from 'framer-motion'
-const About = () => {
- const ref = useRef(null)
+"use client";
+import React, { useEffect, useState } from "react";
+import { Button } from "../../components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
-   const isInView = useInView(ref, { once: true, margin: "-100px" })
-    const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-    const scaleY = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.15, 1]);
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0.6, 1, 1, 0.6]);
+const Header = () => {
+  const [isOnWhite, setIsOnWhite] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Detect white sections on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("#white-section");
+      const headerHeight = 58;
+      let overlapping = false;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= headerHeight && rect.bottom >= 0) {
+          overlapping = true;
+        }
+      });
+
+      setIsOnWhite(overlapping);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div>
-         <section className="  w-full  bg-[#fff] relative   flex flex-col overflow-hidden "
-            ref={ref}
-         >
-        < motion.h1 
-        initial={{ opacity: 0, filter: "blur(10px)" }}
-        animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
-        transition={{
-          duration: 1.5,
-          ease: "easeOut",
-        }}
-        
-        className="  mt-[60px]  self-center font-serif    font-normal text-[#2c2c2c] text-[32px]  md:text-[56px] text-center tracking-[0] leading-[normal]">
-          About Us
-        </motion.h1>
-
-
-        <motion.p 
-         initial={{ opacity: 0  }} // starts lower and invisible
-      animate={isInView ? { opacity: 1 } : {}}  // fades in and slides up
-      transition={{
-         delay: 1,                       // ⏳ wait 3 seconds before starting
-         duration: 1,                     // fade in over 1 second
-         ease: "easeInOut"    // smooth easing
-      }}
-        
-        className="h-[92px] md:w-[800px] text-[14px] px-8 text-start md:text-center  md:text-[18px] self-center mt-2.5  px-4 mb-[60px] [font-family:'Sora',Helvetica] font-[400] text-[#2D2D2D] text-lg text-center tracking-[0] leading-[normal]">
-          Since our founding, we've been dedicated to bridging the gap between
-          those struggling with addiction and the life-changing resources that
-          can help them heal. Our statewide network of resources and recovery
-          specialists, counselors, and peer support advocates, work tirelessly
-          to ensure no Wyoming resident faces these challenges alone.
-        </motion.p>
-        < motion.div
-        
-        >
-            <motion.img  
-              style={{scaleY,
-          opacity,
-          originY: 0.5}}
-            
-            className="ml-[-26px] w-[1204px] md:h-[703px] mt-[25px] bg-cover bg-[50%_50%]"  src={"/Frame2.png"}  
-             
+    <>
+      {/* HEADER */}
+      <header className="fixed top-0 w-full h-[58px] z-[50] flex justify-end">
+        <div className="w-full flex justify-end backdrop-blur-[21px] bg-[linear-gradient(135deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)]">
+          <Button
+            variant="ghost"
+            className="transition-colors duration-500"
+            aria-label="Menu"
+            onClick={() => setMenuOpen(true)}
+          >
+            <img
+              className="w-[42px] object-cover transition-all"
+              alt="Menu icon"
+              src={isOnWhite ? "/Group 1 (1).svg" : "/Group 1.svg"} // 🟢 swap your icons here
             />
+          </Button>
+        </div>
+      </header>
 
-        </motion.div>
+      {/* FULLSCREEN DROPDOWN MENU */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            key="menu"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black bg-opacity-90 text-white flex flex-col items-center justify-center"
+          >
+            <motion.div
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.4 }}
+              className="flex flex-col items-center gap-8 text-3xl font-medium"
+            >
+              <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+              <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+              <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+              <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+            </motion.div>
 
-        <motion.p 
-        initial={{ opacity: 0  }} // starts lower and invisible
-      animate={isInView ? { opacity: 1 } : {}}  // fades in and slides up
-      transition={{
-         delay: 3,                       // ⏳ wait 3 seconds before starting
-         duration: 1,                     // fade in over 1 second
-         ease: "easeInOut"    // smooth easing
-      }}
-        className="  md:px-4 text-[14px] px-8 text-start md:text-center  md:text-[18px] h-[68px] md:w-[852px] self-center mt-[40px] md:mt-[110px]   md:mb-[40px] [font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg text-center tracking-[0] leading-[normal]">
-          We understand that recovery isn't just about overcoming addiction—it's
-          about rebuilding lives, restoring families, and strengthening
-          communities. We're committed to making recovery accessible to
-          everyone, regardless of location, financial situation, or background.
-        </motion.p>
+            {/* CLOSE BUTTON */}
+            <Button
+              onClick={() => setMenuOpen(false)}
+              variant="ghost"
+              className="absolute top-8 right-8 text-white text-xl"
+            >
+              ✕
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
 
-
-
-              < motion.div
-              className='mt-[60px]'
-      
-        >
-            <motion.img  
-                style={{ scaleY,
-          opacity,
-          originY: 0.5}}
-            
-            className=" ml-[30px] md:ml-[294px]  w-[1178px] md:h-[703px] mt-[20px] md:mt-[35px] bg-cover bg-[50%_50%]"  src={"/Frame3.png"} 
-          
-            />
-
-        </motion.div>
-
-
-      </section>  
-    </div>
-  )
-}
-
-export default About
+export default Header;

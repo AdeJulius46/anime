@@ -27,21 +27,21 @@ export default function Home() {
 
   return (
     <div className="relative  bg-[#fff]">
-      {/* <Header /> */}
+      <Header />
       <Hero />
 
 
       <section className="bg-[#ffff]">
 
         {/* <Building /> */}
-        
-      <About /> 
+
+       <About /> 
         <Ourmission/>
         <Comprehensive />
         <Ourpartner /> 
         <Believe />
         <Advocating />
-        <Footer /> 
+        <Footer />  
       </section> 
     </div>
   );
