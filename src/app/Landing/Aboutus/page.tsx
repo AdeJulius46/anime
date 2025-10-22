@@ -25,7 +25,7 @@ const About = () => {
           ease: "easeOut",
         }}
         
-        className="  mt-[60px]  self-center font-serif    font-normal text-[#2c2c2c] text-[32px]  md:text-[56px] text-center tracking-[0] leading-[normal]">
+        className="  mt-[60px]  self-center font-dmserif    font-normal text-[#2c2c2c] text-[32px]  md:text-[56px] text-center tracking-[0] leading-[normal]">
           About Us
         </motion.h1>
 

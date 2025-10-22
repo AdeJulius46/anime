@@ -33,15 +33,15 @@ export default function Home() {
 
       <section className="bg-[#ffff]">
 
-        {/* <Building /> */}
+       {/* <Building />  */}
 
-       <About /> 
+        <About /> 
         <Ourmission/>
         <Comprehensive />
         <Ourpartner /> 
         <Believe />
         <Advocating />
-        <Footer />  
+        <Footer />   
       </section> 
     </div>
   );
