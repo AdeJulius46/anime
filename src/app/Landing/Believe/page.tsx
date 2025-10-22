@@ -18,17 +18,6 @@ const Believe = () => {
             ref={ref}
               id="white-section"
          >
-        {/* < motion.h1 
-        initial={{ opacity: 0, filter: "blur(10px)" }}
-        animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
-        transition={{
-          duration: 1.5,
-          ease: "easeOut",
-        }}
-        
-        className="  mt-[60px]  self-center font-serif    font-normal text-[#2c2c2c] text-[32px]  md:text-[56px] text-center tracking-[0] leading-[normal]">
-          About Us
-        </motion.h1> */}
 
 
         <motion.p 
@@ -66,7 +55,7 @@ const Believe = () => {
          duration: 1,                     // fade in over 1 second
          ease: "easeInOut"    // smooth easing
       }}
-        className="px-  md:px-4 text-[14px] px-8 text-start md:text-center  md:text-[18px] h-[68px] md:w-[852px] self-center mt-[40px] md:mt-[110px]   md:mb-[40px] [font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg text-center tracking-[0] leading-[normal]">
+        className="py-8 md:px-4 text-[14px] px-8 text-start md:text-center  md:text-[18px] h-[68px] md:w-[852px] self-center mt-[40px] md:mt-[110px]   md:mb-[40px] [font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg text-center tracking-[0] leading-[normal]">
       These strategic relationships allow us to leverage diverse expertise, 
       share resources efficiently, and create a truly integrated system of care. The result is more comprehensive, accessible services for individuals and families, regardless of where they live or their specific needs. Together with our partners, we're creating lasting systems change that will improve outcomes for generations to come.
 

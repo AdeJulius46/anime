@@ -58,7 +58,7 @@ const Comprehensive = () => {
          duration: 1,                     // fade in over 1 second
          ease: "easeInOut"    // smooth easing
       }}
-          className="text-center  [font-family:'Sora',Helvetica] text-[14px]  text-[#2c2c2c] md:text-[18px] text-base md:text-lg max-w-2xl mb-16"
+          className="text-start  [font-family:'Sora',Helvetica] text-[14px]  text-[#2c2c2c] md:text-[18px] text-base md:text-lg max-w-2xl mb-16"
         >
           At Active in Recovery, we understand that navigating the path to
           recovery can be overwhelming. Our comprehensive services are accessible

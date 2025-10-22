@@ -71,8 +71,7 @@ const Support = () => {
               [start, end],
               [0, 1]
             );
-
-            const y = useTransform(serviceProgress, [0, 1], [10 + index * 20, 0]);
+            const y = useTransform(serviceProgress, [0, 1], [4 + index * 30, 0]);
             const opacity = useTransform(serviceProgress, [0, 0.3, 1], [0, 0.5, 1]);
             const scale = useTransform(serviceProgress, [0, 1], [0.85, 1]);
 
