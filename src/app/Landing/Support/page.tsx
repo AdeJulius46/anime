@@ -93,7 +93,7 @@ const Support = () => {
                   </h3>
                     </div>
 
-                  <p className=" md:w-[420px] text-start  text-[14px] md:text-[18px] md:px-8">
+                  <p className=" md:w-[420px] text-start text-[#2c2c2c] text-[14px] md:text-[18px] md:px-8">
                     {service.Subtitles}
                   </p>
 

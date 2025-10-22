@@ -2,16 +2,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function Building() {
-  const words = ["Building", "a Stronger", "Wyoming"];
+function Money() {
+  const words = ["Money", "Advocacy", "Builds"];
 
   return (
-    <section className="w-full relative self-center flex items-center justify-center h-[100vh] bg-[url('/first1.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
+    <section className="w-full relative self-center flex flex-col  items-center justify-center h-[100vh] bg-[url('/first.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Animated Heading */}
-      <h2 className="relative w-full z-10 flex flex-col md:flex-row justify-around items-center gap-2 text-white [font-family:'DM_Serif_Text',Helvetica] font-normal text-[40px] md:text-[56px] text-center tracking-[0] leading-normal">
+      <h2 className="relative w-full  z-10 flex flex-col md:flex-row justify-around items-center gap-2 text-white [font-family:'DM_Serif_Text',Helvetica] font-normal text-[40px] md:text-[56px] text-center tracking-[0] leading-normal">
         {words.map((word, i) => (
           <motion.span
             key={i}
@@ -29,8 +29,11 @@ function Building() {
           </motion.span>
         ))}
       </h2>
+      <p className=" md:w-[800px] pt-[190px] text-[#FFFFFF] z-10 text-center ">
+        As a grassroots organization, Active in Recovery relies on community support to sustain and grow our impact. Together, we're creating a Wyoming where recovery is celebrated, supported, and accessible to all.
+      </p>
     </section>
   );
 }
 
-export default Building;
+export default Money;
