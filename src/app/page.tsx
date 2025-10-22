@@ -36,15 +36,14 @@ export default function Home() {
 
        {/* <Building />  */}
 
-       <Support />
-
-        {/* <About /> 
+        <About /> 
         <Ourmission/>
         <Comprehensive />
         <Ourpartner /> 
         <Believe />
         <Advocating />
-        <Footer />    */}
+       <Support />
+        <Footer />   
       </section> 
     </div>
   );

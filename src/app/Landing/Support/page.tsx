@@ -63,7 +63,7 @@ const Support = () => {
         {/* Services */}
         <div className="flex flex-col w-full  ">
           {supportServices.map((service, index) => {
-            const start = 0.1 + index * 0.25;
+            const start = 0.1 + index * 0.15;
             const end = start + 0.25;
 
             const serviceProgress = useTransform(
@@ -72,7 +72,7 @@ const Support = () => {
               [0, 1]
             );
 
-            const y = useTransform(serviceProgress, [0, 1], [10 + index * 50, 0]);
+            const y = useTransform(serviceProgress, [0, 1], [10 + index * 20, 0]);
             const opacity = useTransform(serviceProgress, [0, 0.3, 1], [0, 0.5, 1]);
             const scale = useTransform(serviceProgress, [0, 1], [0.85, 1]);
 
