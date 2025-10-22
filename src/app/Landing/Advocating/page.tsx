@@ -34,30 +34,36 @@ export default function Advocating() {
   // ✅ Properly typed ref for multiple div elements
   const itemRefs = useRef<Array<HTMLDivElement | null>>([]);
 
-  useEffect(() => {
-    const observers: IntersectionObserver[] = [];
+useEffect(() => {
+  const observers: IntersectionObserver[] = [];
+  const seenIndices = new Set<number>(); // ✅ track which items have been revealed
 
-    itemRefs.current.forEach((ref, i) => {
-      if (!ref) return;
+  itemRefs.current.forEach((ref, i) => {
+    if (!ref) return;
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) setActiveIndex(i);
-          });
-        },
-        { threshold: 0.4 }
-      );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveIndex((prev) => {
+              // mark this item as seen
+              seenIndices.add(i);
+              return i;
+            });
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
 
-      observer.observe(ref);
-      observers.push(observer);
-    });
+    observer.observe(ref);
+    observers.push(observer);
+  });
 
-    return () => {
-      observers.forEach((observer) => observer.disconnect());
-    };
-  }, []);
-
+  return () => {
+    observers.forEach((observer) => observer.disconnect());
+  };
+}, []);
   return (
     <section className="relative w-full bg-white flex flex-col items-center py-16 "   id="white-section">
       <h2 className=" text-[30px]    md:w-full  md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
@@ -96,10 +102,10 @@ export default function Advocating() {
               }}
               initial={{ opacity: 0, y: 40 }}
               animate={{
-                opacity: activeIndex === index ? 1 : 0.25,
-                y: activeIndex === index ? 0 : 10,
-                scale: activeIndex === index ? 1 : 0.99,
-              }}
+                      opacity: activeIndex === index || activeIndex > index ? 1 : 0.25,
+                      y: activeIndex === index ? 0 : 10,
+                      scale: activeIndex === index ? 1 : 0.99,
+                    }}
               transition={{
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
