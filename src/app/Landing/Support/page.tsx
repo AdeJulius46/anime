@@ -64,7 +64,7 @@ const Support = () => {
         <div className="flex flex-col w-full  ">
           {supportServices.map((service, index) => {
             const start = 0.1 + index * 0.15;
-            const end = start + 0.25;
+            const end = start + 0.15;
 
             const serviceProgress = useTransform(
               scrollYProgress,
