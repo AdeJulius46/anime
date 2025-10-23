@@ -29,7 +29,7 @@ function Money() {
           </motion.span>
         ))}
       </h2>
-      <p className=" md:w-[800px] pt-[190px] text-[#FFFFFF] z-10 text-center ">
+      <p className=" md:w-[800px] pt-[190px] text-[#FFFFFF] text-[14px] md:text-[18px] z-10 text-center ">
         As a grassroots organization, Active in Recovery relies on community support to sustain and grow our impact. Together, we're creating a Wyoming where recovery is celebrated, supported, and accessible to all.
       </p>
     </section>

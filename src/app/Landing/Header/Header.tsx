@@ -57,7 +57,7 @@ const Header = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black bg-opacity-90 text-white flex flex-col items-center justify-center"
+            className="fixed inset-0 z-[100] bg-white text-black   bg-opacity-90 text-white flex flex-col items-center justify-center"
           >
             <motion.div
               initial={{ y: -30, opacity: 0 }}
@@ -65,7 +65,7 @@ const Header = () => {
               transition={{ delay: 0.2, duration: 0.4 }}
               className="flex flex-col items-center gap-8  font-medium"
             >
-              <div className="flex flex-col items-center gap-4 ">
+              <div className="flex flex-col items-center gap-4  text-[#000] text-[18px]">
                 <label>
                 <p className="text-[#8A8A8A] text-[14px]">Menu</p>
                 </label>
@@ -78,9 +78,9 @@ const Header = () => {
               <a href="#How-you-can-Support-our-Work" onClick={() => setMenuOpen(false)}>How you can Support our Work</a>
               <a href="#Our-Strategic-Partnership" onClick={() => setMenuOpen(false)}>Our Strategic Partnership</a>
               </div>
-              <div className="flex flex-col items-center ">
+              <div className="flex flex-col items-center text-[18px] text-[#000]  ">
                 <label>
-                  <p className="text-[#8A8A8A] text-[14px]">Store</p>
+                  <p className="text-[#8A8A8A] text-[14px]   ">Store</p>
                 </label>
               <a href="/Coming-soon" onClick={() => setMenuOpen(false)}>Buy Merchandize </a>
               </div>
@@ -90,7 +90,7 @@ const Header = () => {
             <Button
               onClick={() => setMenuOpen(false)}
               variant="ghost"
-              className="absolute top-8 right-8 text-white text-xl"
+              className="absolute top-8 right-8 text-[#000] text-xl"
             >
               ✕
             </Button>
