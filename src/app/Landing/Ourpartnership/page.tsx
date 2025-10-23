@@ -72,7 +72,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <section className="relative w-full bg-white flex flex-col items-center py-16"   id="white-section">
+    <section className="relative w-full bg-white flex flex-col items-center py-16"   id="white-section Our-Strategic-Partnership" >
       <h2 className=" text-[30px] w-64  md:w-full  md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
         Our Strategic Partnerships
       </h2>

@@ -65,7 +65,7 @@ useEffect(() => {
   };
 }, []);
   return (
-    <section className="relative w-full bg-white flex flex-col items-center py-16 "   id="white-section">
+    <section className="relative w-full bg-white flex flex-col items-center py-16 "   id="white-section Advocating-for-Change" >
       <h2 className=" text-[30px]    md:w-full  md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
        Advocating for Change
       </h2>

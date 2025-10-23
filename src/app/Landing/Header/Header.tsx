@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <>
       {/* HEADER */}
-      <header className=" md:hidden  fixed top-0 w-full h-[58px] z-[50] flex justify-end" id="white-section">
+      <header className=" fixed top-0 w-full h-[58px] z-[50] flex justify-end" id="white-section">
         <div className="w-full flex justify-end backdrop-blur-[21px] bg-[linear-gradient(135deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)]">
           <Button
             variant="ghost"
@@ -63,12 +63,27 @@ const Header = () => {
               initial={{ y: -30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.4 }}
-              className="flex flex-col items-center gap-8 text-3xl font-medium"
+              className="flex flex-col items-center gap-8  font-medium"
             >
+              <div className="flex flex-col items-center gap-4 ">
+                <label>
+                <p className="text-[#8A8A8A] text-[14px]">Menu</p>
+                </label>
+              <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
               <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-              <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-              <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
-              <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+              <a href="#Our-Mission" onClick={() => setMenuOpen(false)}>Our Mission & Vision</a>
+              <a href="#Comprehensive-Support" onClick={() => setMenuOpen(false)}>Comprehensive Support Services</a>
+              <a href="#Our-Strategic-Partnership" onClick={() => setMenuOpen(false)}>Our Strategic Partnership</a>
+              <a href="#Advocating-for-Change" onClick={() => setMenuOpen(false)}>Advocating for Change</a>
+              <a href="#How-you-can-Support-our-Work" onClick={() => setMenuOpen(false)}>How you can Support our Work</a>
+              <a href="#Our-Strategic-Partnership" onClick={() => setMenuOpen(false)}>Our Strategic Partnership</a>
+              </div>
+              <div className="flex flex-col items-center ">
+                <label>
+                  <p className="text-[#8A8A8A] text-[14px]">Store</p>
+                </label>
+              <a href="#Our-Strategic-Partnership" onClick={() => setMenuOpen(false)}>Buy Merchandize </a>
+              </div>
             </motion.div>
 
             {/* CLOSE BUTTON */}

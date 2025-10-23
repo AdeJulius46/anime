@@ -15,6 +15,7 @@ const About = () => {
   return (
     <div>
          <section className="  w-full  bg-[#fff] relative   flex flex-col overflow-hidden "
+         id='about'
             ref={ref}
          >
         < motion.h1 

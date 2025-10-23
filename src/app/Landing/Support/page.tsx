@@ -43,7 +43,7 @@ const Support = () => {
     <div className="w-full bg-[#fff] relative ">
       <section
         ref={containerRef}
-          id="white-section"
+          id="white-section How-You-Can-Support-Our-Work"
         className="w-full min-h-screen bg-[#fff] relative  flex flex-col items-center justify-start py-20 md:py-32 px-6 md:px-12"
       >
         {/* Section Heading */}

@@ -29,13 +29,8 @@ export default function Home() {
 
   return (
     <div className="relative  bg-[#fff]">
-      <Header />
       <Hero />
-
-
       <section className="bg-[#fff]">
-
-
         <About /> 
         <Ourmission/>
         <Comprehensive />
@@ -45,7 +40,6 @@ export default function Home() {
         <Advocating />
        <Support />
        <Money />
-        <Footer />   
       </section> 
     </div>
   );

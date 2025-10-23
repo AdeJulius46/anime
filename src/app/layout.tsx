@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Serif_Text, Sora } from "next/font/google";
 import "./globals.css";
-
+// import Header from "@/components/Header/Header";
+import Header from "./Landing/Header/Header";
+import Footer from "./Landing/Footer/page";
 const dmSerifText = DM_Serif_Text({
   subsets: ["latin"],
   weight: "400", // DM Serif Text has only one weight
@@ -28,7 +30,11 @@ export default function RootLayout({
       <body
         className={`${dmSerifText.variable} ${sora.variable} antialiased`}
       >
+        <Header />
+        <div>
         {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
