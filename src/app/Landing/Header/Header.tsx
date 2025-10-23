@@ -82,7 +82,7 @@ const Header = () => {
                 <label>
                   <p className="text-[#8A8A8A] text-[14px]">Store</p>
                 </label>
-              <a href="#Our-Strategic-Partnership" onClick={() => setMenuOpen(false)}>Buy Merchandize </a>
+              <a href="/Coming-soon" onClick={() => setMenuOpen(false)}>Buy Merchandize </a>
               </div>
             </motion.div>
 
