@@ -39,7 +39,7 @@ function OurMission() {
 
   return (
     <div ref={sectionRef} className="w-full bg-white relative"  id="Our-Mission">
-      <section className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto py-4 md:py-0">
         <motion.h2 className="text-center px-4 md:px-0 py-[20px] md:py-[50px] font-serif font-[400] text-[#2d2d2d] text-[32px] md:text-[56px] md:mb-16"
         initial={{ opacity: 0, filter: "blur(10px)" }}
         animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}

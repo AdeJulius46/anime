@@ -55,7 +55,7 @@ const Support = () => {
           ease: "easeOut",
         }}
 
-          className="text-center font-serif wrap text-[#2c2c2c] text-[32px] md:text-[56px] mb-6"
+          className="text-center w-64  md:w-full  font-serif wrap text-[#2c2c2c] text-[32px] md:text-[56px] mb-6"
         >
              How You Can Support Our Work
         </motion.h2>
