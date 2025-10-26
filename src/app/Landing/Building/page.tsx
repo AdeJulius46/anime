@@ -18,12 +18,18 @@ function Building() {
             initial={{ opacity: 0, y: 60, filter: "blur(14px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{
-              duration: 2.2, // slower, smooth motion
+              duration: 2.2,
               ease: [0.22, 1, 0.36, 1],
-              delay: i * 0.8, // wave-like stagger
+              delay: i * 0.8,
             }}
-            viewport={{ once: true, amount: 0.4 }} // trigger when 40% in view
-            style={{ willChange: "transform, opacity, filter" }}
+            viewport={{ once: true, amount: 0.4 }}
+            style={{
+              willChange: "transform, opacity, filter",
+              // Apply staggered indent only on mobile (Tailwind breakpoints handled with media query)
+              marginLeft: `${i * 100}px`,
+              marginTop: `${i * 20}px`
+            }}
+            className="md:ml-0" // reset margin on desktop
           >
             {word}
           </motion.span>
