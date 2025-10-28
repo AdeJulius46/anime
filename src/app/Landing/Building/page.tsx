@@ -6,7 +6,7 @@ function Building() {
   const words = ["Building", "a Stronger", "Wyoming"];
 
   return (
-    <section className="w-full relative self-center flex items-center justify-center h-[100vh] bg-[url('/first1.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
+    <section className="w-full relative self-center flex items-center justify-center  md:h-[100vh] bg-[url('/first1.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
@@ -26,8 +26,8 @@ function Building() {
             style={{
               willChange: "transform, opacity, filter",
               // Apply staggered indent only on mobile (Tailwind breakpoints handled with media query)
-              marginLeft: `${i * 100}px`,
-              marginTop: `${i * 20}px`
+              marginLeft: `${i * 80}px`,
+              marginTop: `${i * 25}px`
             }}
             className="md:ml-0" // reset margin on desktop
           >

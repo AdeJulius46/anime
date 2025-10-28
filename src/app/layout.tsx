@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${dmSerifText.variable} ${sora.variable} antialiased`}
       >
-        <Header />
+        {/* <Header /> */}
         <div>
         {children}
         </div>

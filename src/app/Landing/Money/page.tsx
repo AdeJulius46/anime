@@ -6,7 +6,7 @@ function Money() {
   const words = ["Money", "Advocacy", "Builds"];
 
   return (
-    <section className="w-full relative self-center flex flex-col  items-center justify-center h-[100vh] bg-[url('/first.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
+    <section className="w-full relative self-center flex flex-col  items-center justify-center md:h-[100vh] bg-[url('/first.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
@@ -23,13 +23,19 @@ function Money() {
               delay: i * 0.8, // wave-like stagger
             }}
             viewport={{ once: true, amount: 0.4 }} // trigger when 40% in view
-            style={{ willChange: "transform, opacity, filter" }}
+            style={{ willChange: "transform, opacity, filter",
+               marginLeft: `${i * 80}px`,
+              marginTop: `${i * 25}px`
+
+            }}
+            
+            className="md:ml-0"
           >
             {word}
           </motion.span>
         ))}
       </h2>
-      <p className=" md:w-[800px] pt-[190px] text-[#FFFFFF] text-[14px] md:text-[18px] z-10 text-center ">
+      <p className="  px-8  py-4  md:w-[800px]  pt-[30px]  md:pt-[190px] text-[#FFFFFF] text-[14px] md:text-[18px] z-10 text-center ">
         As a grassroots organization, Active in Recovery relies on community support to sustain and grow our impact. Together, we're creating a Wyoming where recovery is celebrated, supported, and accessible to all.
       </p>
     </section>
