@@ -72,7 +72,7 @@ const Believe = () => {
           opacity,
           originY: 0.5}}
             
-            className="  ml-[30px] md:ml-[294px]  w-[1178px] md:h-[703px] mt-[120px] md:mt-[35px] bg-cover bg-[50%_50%]"  src={"/Frame 19.png"} 
+            className="ml-[30px] md:ml-[294px]  w-[1178px] md:h-[703px] mt-[120px] md:mt-[95px] bg-cover bg-[50%_50%]"  src={"/Frame 19.png"} 
           
             />
 

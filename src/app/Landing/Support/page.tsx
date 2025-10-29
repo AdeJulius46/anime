@@ -32,12 +32,12 @@ const supportServices = [
 
 const Support = () => {
   const containerRef = useRef(null);
-   const isInView = useInView(containerRef, { once: true, margin: "-100px" })
+   const isInView = useInView(containerRef, { once: true, margin: "10px" })
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
+ const { scrollYProgress } = useScroll({
+  target: containerRef,
+  offset: ["start 80%", "end 20%"], // 👈 starts when top of section hits 80% of viewport height
+});
 
   return (
     <div className="w-full bg-[#fff] relative ">
@@ -71,7 +71,7 @@ const Support = () => {
               [start, end],
               [0, 1]
             );
-            const y = useTransform(serviceProgress, [0, 1], [4 + index * 30, 0]);
+            const y = useTransform(serviceProgress, [0, 1], [4 + index * 10, 0]);
             const opacity = useTransform(serviceProgress, [0, 0.3, 1], [0, 0.5, 1]);
             const scale = useTransform(serviceProgress, [0, 1], [0.85, 1]);
 

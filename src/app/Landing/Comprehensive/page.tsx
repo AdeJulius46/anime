@@ -24,10 +24,10 @@ const Comprehensive = () => {
   const containerRef = useRef(null);
    const isInView = useInView(containerRef, { once: true, margin: "-100px" })
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
+ const { scrollYProgress } = useScroll({
+  target: containerRef,
+  offset: ["start 80%", "end 20%"], // 👈 starts when top of section hits 80% of viewport height
+});
 
   return (
     <div className="w-full bg-[#fff] relative ">
