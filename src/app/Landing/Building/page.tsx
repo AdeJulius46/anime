@@ -27,7 +27,7 @@ function Building() {
               willChange: "transform, opacity, filter",
               // Apply staggered indent only on mobile (Tailwind breakpoints handled with media query)
               marginLeft: `${i * 80}px`,
-              marginTop: `${i * 25}px`
+              marginTop: `${i * 20}px`
             }}
             className="md:ml-0" // reset margin on desktop
           >
