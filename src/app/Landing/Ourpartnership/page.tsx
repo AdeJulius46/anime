@@ -55,7 +55,7 @@ export default function OurPartner() {
   return (
     <section
       id="white-section Our-Strategic-Partnership"
-      className="relative w-full bg-white flex flex-col items-center py-16"
+      className="relative w-full bg-white flex flex-col items-center md:py-16"
     >
       <h2 className="text-[32px] w-64 md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
         Our Strategic Partnerships
@@ -108,7 +108,7 @@ export default function OurPartner() {
                 {item.description}
               </p>
               {index < partnershipItems.length - 1 && (
-                <div className="h-[1px] bg-gray-200 mt-6" />
+                <div className="h-[1px] bg-gray-200 " />
               )}
             </motion.div>
           ))}
