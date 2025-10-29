@@ -18,7 +18,7 @@ const Hero = () => {
          initial={{ scale: 1.2}}
         animate={{ scale: 1 }}
         transition={{
-          delay:1,
+          delay:0,
           duration:2,
           ease: [0.25, 1, 0.5, 1], // smooth cinematic ease
         }}
