@@ -16,6 +16,7 @@ import Advocating from "./Landing/Advocating/page";
 import Believe from "./Landing/Believe/page";
 import Support from "./Landing/Support/page";
 import Money from "./Landing/Money/page";
+import Hero2 from "./Landing/Hero2/page";
 export default function Home() {
   useEffect(()=>{
     const lenis = new Lenis();
@@ -29,8 +30,11 @@ export default function Home() {
 
   return (
     <div className="relative  bg-[#fff]">
-      <Hero />
-      <section className="bg-[#fff]">
+      <Hero2 />
+      {/* <Hero /> */}
+      {/* <Hero /> */}
+      
+        <section className="bg-[#fff]">
         <About /> 
         <Ourmission/>
         <Comprehensive />
@@ -40,7 +44,7 @@ export default function Home() {
         <Advocating />
        <Support />
        <Money />
-      </section> 
+      </section>   
     </div>
   );
 }
