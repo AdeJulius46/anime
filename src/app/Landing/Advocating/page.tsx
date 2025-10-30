@@ -42,12 +42,14 @@ export default function OurPartner() {
   const sectionPoints = partnershipItems.map((_, i) => i / (total - 1));
 
   useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (v) => {
-      const closestIndex = Math.round(v * (total - 1));
-      setActiveIndex(closestIndex);
-    });
-    return () => unsubscribe();
-  }, [scrollYProgress, total]);
+  const unsubscribe = scrollYProgress.on("change", (v) => {
+    const sectionHeight = 1 / total;
+    const index = Math.floor(v / (sectionHeight * 0.5)); // trigger sooner (0.5 = 50% threshold)
+    const clamped = Math.max(0, Math.min(index, total - 1));
+    setActiveIndex(clamped);
+  });
+  return () => unsubscribe();
+}, [scrollYProgress, total]);
 
   return (
     <section
@@ -97,7 +99,7 @@ export default function OurPartner() {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col   gap-0   h-[25vh] md:h-[50vh]"
+              className="flex flex-col   gap-0   h-[25vh] md:h-[40vh]"
             >
               <h3 className="text-[20px] md:text-[32px] font-serif text-[#2c2c2c]">
                 {item.title}
