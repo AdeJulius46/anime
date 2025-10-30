@@ -33,8 +33,8 @@ export default function Home() {
       <Hero2 />
       {/* <Hero /> */}
       {/* <Hero /> */}
-      
-        <section className="bg-[#fff]">
+
+        <section className="bg-[#fff]  mt-[-250px] md:mt-[-150px]">
         <About /> 
         <Ourmission/>
         <Comprehensive />

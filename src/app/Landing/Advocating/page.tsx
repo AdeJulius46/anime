@@ -64,7 +64,8 @@ export default function OurPartner() {
       >
         {/* Left pinned image */}
         <div className="flex-1 flex justify-center">
-          <div className="sticky top-24 w-[529px] h-[447px] hidden md:flex overflow-hidden">
+          
+          <div className="sticky top-24 w-[529px] h-[547px] hidden md:flex overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeIndex}
@@ -89,7 +90,7 @@ export default function OurPartner() {
               animate={{
                 opacity:
                   activeIndex === index || activeIndex > index ? 1 : 0.25,
-                y: activeIndex === index ? 0 : 10,
+                y: activeIndex === index ? 0 : 5,
                 scale: activeIndex === index ? 1 : 0.98,
               }}
               transition={{

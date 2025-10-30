@@ -88,11 +88,11 @@ export default function OurPartner() {
           {partnershipItems.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 5 }}
               animate={{
                 opacity:
                   activeIndex === index || activeIndex > index ? 1 : 0.25,
-                y: activeIndex === index ? 0 : 20,
+                y: activeIndex === index ? 0 : 10,
                 scale: activeIndex === index ? 1 : 0.98,
               }}
               transition={{
