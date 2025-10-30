@@ -19,7 +19,7 @@ const { scrollYProgress } = useScroll({
   const opacity = useTransform(scrollYProgress, [0, 0.2, 1.5], [0, 1, 1]);
  
   return (
-    <section  ref={container}  className="h-[200vh] relative ">
+    <section  ref={container}  className="md:h-[150vh] relative ">
 
     <section  className="sticky  top-0 h-screen bg-[url('/landing.png')] bg-cover bg-center bg-no-repeat flex justify-center  items-center" >
      <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-black/80 via-black/60 to-transparent rounded-b-lg" />
@@ -38,10 +38,12 @@ const { scrollYProgress } = useScroll({
     <div className="el z-20">
         <motion.div 
         style={{ scale: scale4, opacity: opacity }} 
-         className="Image-container  bg-white ">
+         className="w-full h-[100vh] relative items-center  bg-white  flex justify-center ">
 
-            <div  className=" text-[#000] text-[10px] md:text-[30px] items-center justify-center flex jul">
-                <h1 className="text-[#000] text-[140px] text-center  md:leading-[1.5] font-serif  uppercase ">
+            <div  className="   text-[#000] text-[10px] md:text-[30px] items-center justify-center flex jul">
+                <h1 className="md:text-[140px] text-center md:leading-[1.5] font-serif uppercase 
+             bg-[url('/landing.png')] bg-cover bg-center 
+             text-transparent bg-clip-text">
                   Active in Recovery
                 </h1>
 

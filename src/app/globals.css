@@ -61,14 +61,6 @@ h1, h2, h3 {
   align-items: center;
 }
 
-.el .Image-container {
-     display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-  position: relative;
-}
-
 
 /* .el .Image-container img {
   object-fit: cover;
