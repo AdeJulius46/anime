@@ -15,7 +15,7 @@ const { scrollYProgress } = useScroll({
 });
 
 // const scale4 = useTransform(scrollYProgress, [0, 1], [0, 6]);
-  const scale4 = useTransform(scrollYProgress, [0, 1], [4, 1]); // zooms out
+  const scale4 = useTransform(scrollYProgress, [0, 1], [14, 1]); // zooms out
   const opacity = useTransform(scrollYProgress, [0, 0.2, 1.5], [0, 1, 1]);
  
   return (
