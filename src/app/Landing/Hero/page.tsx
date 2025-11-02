@@ -22,7 +22,7 @@ const Hero = () => {
           duration:2,
           ease: [0.25, 1, 0.5, 1], // smooth cinematic ease
         }}
-      className="sticky  top-0 h-screen bg-[url('/landing.png')] bg-cover bg-center bg-no-repeat flex justify-center  items-center"
+      className=" sticky  md:hidden  top-0 h-screen bg-[url('/landing.png')] bg-cover bg-center bg-no-repeat flex justify-center  items-center"
     >
  
       <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-black/80 via-black/60 to-transparent rounded-b-lg" />

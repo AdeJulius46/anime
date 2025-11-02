@@ -57,7 +57,7 @@ export default function OurPartner() {
       id="white-section Our-Strategic-Partnership"
       className="relative w-full bg-white flex flex-col items-center md:py-16"
     >
-      <h2 className="text-[32px] w-64 md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
+      <h2 className="text-[32px] w-64 mt-[20px] md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
         Our Strategic Partnerships
       </h2>
 
@@ -99,7 +99,7 @@ export default function OurPartner() {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col   gap-0   h-[25vh] md:h-[50vh]"
+              className="flex flex-col   h-[22vh] md:h-[50vh] px-4"
             >
               <h3 className="text-[20px] md:text-[32px] font-serif text-[#2c2c2c]">
                 {item.title}

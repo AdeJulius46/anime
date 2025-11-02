@@ -56,7 +56,7 @@ export default function OurPartner() {
       id="white-section Our-Strategic-Partnership"
       className="relative w-full bg-white flex flex-col items-center md:py-16"
     >
-      <h2 className="text-[32px] w-64 md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
+      <h2 className="text-[32px] mt-[15px] w-64 md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
        Advocating for Change
       </h2>
 
@@ -84,7 +84,7 @@ export default function OurPartner() {
         </div>
 
         {/* Right scroll column */}
-        <div className="w-[677px] flex flex-col ">
+        <div className="w-[677px] flex flex-col px-4">
           {partnershipItems.map((item, index) => (
             <motion.div
               key={index}
@@ -99,7 +99,7 @@ export default function OurPartner() {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col   gap-0   h-[25vh] md:h-[40vh]"
+              className="flex flex-col   gap-0    h-[22vh] md:h-[40vh]"
             >
               <h3 className="text-[20px] md:text-[32px] font-serif text-[#2c2c2c]">
                 {item.title}
