@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function Money() {
-  const words = ["Money", "Advocacy", "Builds"];
+  const words = ["Where Grit", "Meets", "Giving"];
 
   return (
     <section className="w-full relative self-center flex flex-col  items-center justify-center md:h-[100vh] bg-[url('/first.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">

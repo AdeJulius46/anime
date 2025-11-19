@@ -93,11 +93,11 @@ const Comprehensive = () => {
                   <span className="font-['Sora'] text-[#2c2c2c] text-2xl">
                     {service.number}
                   </span> 
-                  <div>
+                  <div className="flex flex-col py-2">
                   <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[47px] leading-tight">
                     {service.title}
                   </h3>
-                      <motion.p className="mt-10 text-[#2c2c2c] underline text-lg font-['Sora'] cursor-pointer">
+                      <motion.p className="text-start  md:mt-10 text-[#2c2c2c] underline text-lg font-['Sora'] cursor-pointer">
                     {service.subtitle}
                   </motion.p>
 
@@ -117,7 +117,7 @@ const Comprehensive = () => {
         </div>
 
         {/* Footer text */}
-        <p className="mt-10 text-[#2c2c2c] text-[18px] font-['Sora'] cursor-pointer">
+        <p className="mt-10 text-center  text-[#2c2c2c]text-[13px]  md:text-[18px] font-['Sora'] cursor-pointer">
           If you need information or support, reach out,
         </p>
         <motion.p className="text-center font-['DM_Serif_Text'] text-[#2c2c2c] text-[24px] md:text-[32px] max-w-3xl">
