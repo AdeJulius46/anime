@@ -27,7 +27,7 @@ function OurMission() {
       description:
         "Transforming perception through awareness, action and education",
       imageSrc: "Frame 6.png",
-      iconSrc: "Frame7.png",
+      iconSrc: "Frame 7.png",
     },
     {
       title: "Build a Stronger Wyoming",

@@ -2,11 +2,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function Building() {
+function Building() { 
   const words = ["Building", "a Stronger", "Wyoming"];
 
   return (
-    <section className="w-full relative self-center flex items-center justify-center h-[40vh]  md:h-[100vh] bg-[url('/first1.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
+    <section className="w-full relative self-center flex items-center justify-center h-[40vh]  md:h-[100vh] bg-[url('/builder.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 

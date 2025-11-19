@@ -6,16 +6,19 @@ const supportServices = [
   {
     number: "01",
     title: "Resource Database",
+    subtitle:"View resources",
     imageSrc: "Frame 10.png",
   },
   {
     number: "02",
     title: "Peer Support",
+      subtitle:"View resources",
     imageSrc: "Frame 11.png",
   },
   {
     number: "03",
     title: "Educational Resources",
+    subtitle:"View resources",
     imageSrc: "Frame 12.png",
   },
 ];
@@ -58,12 +61,9 @@ const Comprehensive = () => {
          duration: 1,                     // fade in over 1 second
          ease: "easeInOut"    // smooth easing
       }}
-          className="text-start  [font-family:'Sora',Helvetica] text-[14px]  text-[#2c2c2c] md:text-[18px] text-base md:text-lg max-w-2xl mb-16"
+          className="  [font-family:'Sora',Helvetica] text-[14px]  text-[#2c2c2c] md:text-[18px] text-base md:text-lg max-w-2xl mb-16"
         >
-          At Active in Recovery, we understand that navigating the path to
-          recovery can be overwhelming. Our comprehensive services are accessible
-          throughout Wyoming, ensuring that no matter where you are in the state,
-          help is always within reach.
+          Navigating the path to recovery can be overwhelming. Active in Recovery provides comprehensive services accessible throughout Wyoming, ensuring that help is always within reach—no matter where someone is in the state.
         </motion.p>
 
         {/* Services */}
@@ -93,9 +93,15 @@ const Comprehensive = () => {
                   <span className="font-['Sora'] text-[#2c2c2c] text-2xl">
                     {service.number}
                   </span> 
+                  <div>
                   <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[47px] leading-tight">
                     {service.title}
                   </h3>
+                      <motion.p className="mt-10 text-[#2c2c2c] underline text-lg font-['Sora'] cursor-pointer">
+                    {service.subtitle}
+                  </motion.p>
+
+                  </div>
                   
                 </div>
 
@@ -111,13 +117,15 @@ const Comprehensive = () => {
         </div>
 
         {/* Footer text */}
-        <motion.p className="text-center mt-24 font-['DM_Serif_Text'] text-[#2c2c2c] text-[24px] md:text-[32px] max-w-3xl">
+        <p className="mt-10 text-[#2c2c2c] text-[18px] font-['Sora'] cursor-pointer">
+          If you need information or support, reach out,
+        </p>
+        <motion.p className="text-center font-['DM_Serif_Text'] text-[#2c2c2c] text-[24px] md:text-[32px] max-w-3xl">
+          air.activeinrecovery@gmail.com 
+        </motion.p>
+        <motion.p className="text-center mt-4 font-['DM_Serif_Text'] text-[#2c2c2c] text-[24px] md:text-[32px] max-w-3xl">
           Support services are designed to complement each other, creating a
           continuum of care that evolves with individuals’ changing needs.
-        </motion.p>
-
-        <motion.p className="mt-10 text-[#2c2c2c] underline text-lg font-['Sora'] cursor-pointer">
-          View Resource
         </motion.p>
       </section>
     </div>
