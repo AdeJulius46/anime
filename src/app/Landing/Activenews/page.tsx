@@ -2,8 +2,8 @@ import React from 'react'
 
 function Activenews() {
   return (
-    <div>
-        <div className='flex flex-col items-center gap-4 mt-20  px-4'>
+    <div className='relative bg-white'>
+        <div className='flex flex-col items-center gap-4  px-4 bg-white '>
             <h1 className=' text-[24px] font-[400] md:text-[32px]'>
               Active in Recovery in the News
             </h1>

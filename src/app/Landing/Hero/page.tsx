@@ -11,9 +11,7 @@ const Hero = () => {
 
 
   return (
-    
-
-    <motion.section
+        <motion.section
       style={{ height}}
          initial={{ scale: 1.2}}
         animate={{ scale: 1 }}
@@ -22,12 +20,12 @@ const Hero = () => {
           duration:2,
           ease: [0.25, 1, 0.5, 1], // smooth cinematic ease
         }}
-      className=" sticky  md:hidden  top-0 h-screen bg-[url('/landing.png')] bg-cover bg-center bg-no-repeat flex justify-center  items-center"
+      className="sticky  md:hidden  top-0 h-screen bg-[url('/landing.png')] bg-cover bg-center bg-no-repeat flex justify-center  items-center"
     >
  
       <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-black/80 via-black/60 to-transparent rounded-b-lg" />
       {/* Hero content */}
-      <div className=" flex flex-col items-center justify-end    md:justify-center text-center text-white  mt-[550px] md:mt-[390px]  md:px-[45px]  ">
+      <div className="flex flex-col h-screen items-center justify-end text-center text-white md:px-[45px] gap-4  mb-60">
         <motion.h3 className="font-[400] text-[16px]   [font-family:'Sora',Helvetica]   w-64 md:w-full  md:text-[24px] "
         initial={{ opacity: 0  }} // starts lower and invisible
       animate={{ opacity: 1, y:68}}  // fades in and slides up
@@ -39,7 +37,8 @@ const Hero = () => {
         >
           Empowering individuals to reduce stigma and build a stronger.
         </motion.h3>
-        <motion.h1 className="text-[60px] mt-[40px] font-[400] md:mt-[0] leading-none text-center  md:leading-[1.5] font-serif  uppercase md:text-[126px] z-10"
+        
+        <motion.h1 className="text-[60px] mt-[40px] font-[400] md:mt-[0] leading-none text-center  md:leading-[1.5] font-serif  uppercase md:text-[126px]"
          initial={{ opacity: 0, y: 90 }} // starts lower and invisible
       animate={{ opacity: 1, y: 30 }}  // fades in and slides up
       transition={{
