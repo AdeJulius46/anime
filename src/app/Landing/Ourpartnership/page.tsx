@@ -14,19 +14,20 @@ const partnershipItems = [
     title: "Healthcare Providers",
     description:
       "Working with doctors, nurses, therapists, and mental health professionals to ensure quality care throughout the recovery journey.",
-    image: "/Frame 14 (1).png",
+   image: "/Frame14(4).png",
   },
   {
     title: "Community Organizations",
     description:
       "Partnering with local groups to extend our reach into every Wyoming community, including faith-based organizations, schools, employers, and grassroots coalitions.",
-    image: "/Frame 14 (2).png",
+    image: "/Frame14(3).png",
   },
   {
     title: "Government Agencies",
     description:
       "Collaborating with state and local agencies to improve access to services for all Wyoming residents.",
-    image: "/Frame 14 (3).png",
+       image: "/Frame14(5).png",
+   
   },
 ];
 

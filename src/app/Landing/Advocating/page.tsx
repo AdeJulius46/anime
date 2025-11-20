@@ -5,28 +5,28 @@ import React, { useRef, useState, useEffect } from "react";
 
 const partnershipItems = [
   {
-    title: "Treatment Facilities",
+    title: "Funding Initiatives",
     description:
-      "Creating seamless referral pathways with rehab centers and mental health facilities across Wyoming.",
-    image: "/Frame 14.png",
+      "Advocating for increased public and private funding for substance abuse and mental health programs throughout Wyoming. ",
+    image: "/Frame14(6).png",
   },
   {
-    title: "Healthcare Providers",
+    title: "Educational Campaigns",
     description:
-      "Working with doctors, nurses, therapists, and mental health professionals to ensure quality care throughout the recovery journey.",
-    image: "/Frame 14 (1).png",
+      "Creating awareness campaigns that reduce stigma and promote understanding of addiction and mental health disorders. ",
+    image: "/Frame14(7).png",
   },
   {
-    title: "Community Organizations",
+    title: "Community Mobilization",
     description:
-      "Partnering with local groups to extend our reach into every Wyoming community, including faith-based organizations, schools, employers, and grassroots coalitions.",
-    image: "/Frame 14 (2).png",
+      "Engaging communities across Wyoming to support recovery initiatives and create welcoming environments for those in recovery. ",
+    image: "/Frame14(8).png",
   },
   {
-    title: "Government Agencies",
+    title: "Community Mobilization",
     description:
-      "Collaborating with state and local agencies to improve access to services for all Wyoming residents.",
-    image: "/Frame 14 (3).png",
+      "Engaging communities across Wyoming to support recovery initiatives and create welcoming environments for those in recovery. ",
+    image: "/Frame14(8).png",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function OurPartner() {
       className="relative w-full bg-white flex flex-col items-center md:py-16"
     >
       <h2 className="text-[32px] w-64 mt-[20px] md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
-        Our Strategic Partnerships
+      Advocating for Change
       </h2>
 
       <div
@@ -72,7 +72,7 @@ export default function OurPartner() {
       >
         {/* Left pinned image */}
         <div className="flex-1 flex justify-center">
-          <div className="sticky top-24 w-[529px] h-[647px] hidden md:flex overflow-hidden">
+          <div className="sticky top-24 w-[529px] h-[547px] hidden md:flex overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeIndex}
@@ -97,7 +97,7 @@ export default function OurPartner() {
                   duration: 0.6,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
               />
             </AnimatePresence>
           </div>
