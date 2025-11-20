@@ -21,7 +21,7 @@ const { scrollYProgress } = useScroll({
   return (
     <section  ref={container}  className=" h-[130vh] relative ">
 
-    <section  className=" sticky  top-0 h-screen bg-[url('/landing.png')] bg-cover bg-center bg-no-repeat flex justify-center  items-center" >
+    <section  className=" sticky hidden md:flex  top-0 h-screen bg-[url('/landing.png')] bg-cover bg-center bg-no-repeat flex justify-center  items-center" >
      <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-black/80 via-black/60 to-transparent rounded-b-lg" />
       {/* Hero content */}
       <div className=" flex flex-col items-center justify-end    md:justify-center text-center text-white  mt-[550px] md:mt-[390px]  md:px-[45px]  ">
