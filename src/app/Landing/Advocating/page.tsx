@@ -34,7 +34,7 @@ export default function OurPartner() {
   // track scroll progress of the right column
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"],
+    offset: ["start start", "end center"],
   });
 
   // map scroll progress to index changes
@@ -62,7 +62,7 @@ export default function OurPartner() {
 
       <div
         ref={containerRef}
-        className="relative flex w-full max-w-[1352px] gap-[46px] md:min-h-[250vh]"
+        className="relative flex w-full max-w-[1352px] gap-[46px] min-h-[60vh] md:min-h-[230vh]"
       >
         {/* Left pinned image */}
         <div className="flex-1 flex justify-center">
@@ -99,7 +99,7 @@ export default function OurPartner() {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col   gap-0    h-[26vh] md:h-[40vh]"
+              className="flex flex-col   gap-0 py-8  md:h-[40vh]"
             >
               <h3 className="text-[20px] md:text-[32px] font-serif text-[#2c2c2c]">
                 {item.title}
