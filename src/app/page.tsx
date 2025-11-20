@@ -29,7 +29,7 @@ export default function Home() {
       <Hero />
       <Hero2 />
 
-        <section className="bg-[#fff]  md:mt-[-150px]">
+      <section className="bg-[#fff]  md:mt-[-150px]">
          <About /> 
         <Ourmission/>
         <Comprehensive />
