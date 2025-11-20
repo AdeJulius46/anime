@@ -53,10 +53,11 @@ export default function OurPartner() {
 
   return (
     <section
-      id="white-section Our-Strategic-Partnership"
+      id="Advocating-for-Change"
       className="relative w-full bg-white flex flex-col items-center py-16"
     >
-      <h2 className="text-[32px] mt-[15px] w-64 md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
+      <h2 className="text-[32px] mt-[15px] w-64 md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16
+      " id="white-section">
        Advocating for Change
       </h2>
 

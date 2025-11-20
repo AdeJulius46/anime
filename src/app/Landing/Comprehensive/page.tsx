@@ -36,11 +36,12 @@ const Comprehensive = () => {
     <div className="w-full bg-[#fff] relative ">
       <section
         ref={containerRef}
-          id="white-section Comprehensive-Support-Services"
+          id="Comprehensive-Support"
         className="w-full min-h-screen bg-[#fff] relative  flex flex-col items-center justify-start py-20 md:py-32 px-6 md:px-12"
       >
         {/* Section Heading */}
         <motion.h2
+             id="white-section"
            initial={{ opacity: 0, filter: "blur(10px)" }}
         animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
         transition={{
