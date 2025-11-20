@@ -99,7 +99,7 @@ export default function OurPartner() {
                 duration: 0.5,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col   gap-0    h-[22vh] md:h-[40vh]"
+              className="flex flex-col   gap-0    h-[26vh] md:h-[40vh]"
             >
               <h3 className="text-[20px] md:text-[32px] font-serif text-[#2c2c2c]">
                 {item.title}

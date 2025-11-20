@@ -97,7 +97,7 @@ const Comprehensive = () => {
                   <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[47px] leading-tight">
                     {service.title}
                   </h3>
-                      <motion.p className="text-start  md:mt-10 text-[#2c2c2c] underline text-lg font-['Sora'] cursor-pointer">
+                      <motion.p className="text-start  md:mt-10 text-[#2c2c2c] underline text-[16px] md:text-lg font-['Sora'] cursor-pointer">
                     {service.subtitle}
                   </motion.p>
 
