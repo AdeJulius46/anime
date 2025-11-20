@@ -26,10 +26,10 @@ export default function Home() {
 
   return (
     <div className="relative  bg-[#fff]">
-      <Hero />
+      {/* <Hero /> */}
       <Hero2 />
 
-        <section className="bg-[#fff]  md:mt-[-150px]">
+        <section className="bg-[#fff]  mt-[-290px] md:mt-[-150px]">
          <About /> 
         <Ourmission/>
         <Comprehensive />

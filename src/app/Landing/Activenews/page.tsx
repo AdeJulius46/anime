@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 function Activenews() {
   return (
@@ -10,11 +11,15 @@ function Activenews() {
             <div className='flex flex-col  md:flex-row  gap-8  px-4'>
                 <div className='flex flex-col  gap-2'>
                     <img  src="/Frame.png"/>
+                    <Link href="https://www.powelltribune.com/stories/of-course-i-said-no,171151">
                     <p className='font-[600] text-black  md:text-[20px] underline  cursor-pointer'>Of course, I said no</p>
+                    </Link>
                 </div>
                 <div className='flex flex-col gap-2'>
                     <img  src="/Frame.png"/>
+                    <Link href="https://www.powelltribune.com/stories/of-course-i-said-no,171151">
                     <p className='font-[600] text-black  md:text-[20px] underline  cursor-pointer'>A helping hand up to start again: <br/>  Jackie Fales</p>
+                    </Link>
                 </div>
             </div>
 

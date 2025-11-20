@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { useRef, useState, useEffect } from "react";
 
 const partnershipItems = [
@@ -32,40 +32,43 @@ const partnershipItems = [
 
 export default function OurPartner() {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(-1); // start inactive
 
-  // track scroll progress of the right column
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-   offset: ["start start", "end center"],
-  });
-
-  // map scroll progress to index changes
-  const total = partnershipItems.length;
-  const sectionPoints = partnershipItems.map((_, i) => i / (total - 1));
-
+  // IntersectionObserver to trigger image change only when item fully in view
   useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (v) => {
-      const closestIndex = Math.round(v * (total - 1));
-      setActiveIndex(closestIndex);
-    });
-    return () => unsubscribe();
-  }, [scrollYProgress, total]);
+    const elements = document.querySelectorAll(".partner-item");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = Number(entry.target.getAttribute("data-index"));
+            setActiveIndex(idx);
+          }
+        });
+      },
+      {
+        threshold: 0.7, // require 60% of the item visible
+        rootMargin: "0px 0px -20% 0px",
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => elements.forEach((el) => observer.unobserve(el));
+  }, []);
 
   return (
     <section
-      id="Our-Strategic-Partnership"
+      id="white-section Our-Strategic-Partnership"
       className="relative w-full bg-white flex flex-col items-center md:py-16"
     >
-      <h2 className="text-[32px] w-64 mt-[20px] md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16"
-      id="white-section "
-      >
+      <h2 className="text-[32px] w-64 mt-[20px] md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
         Our Strategic Partnerships
       </h2>
 
       <div
         ref={containerRef}
-        className="relative flex w-full max-w-[1352px] gap-[46px] min-h-[80vh] md:min-h-[230vh]"
+        className="relative flex w-full max-w-[1352px] gap-[46px] md:min-h-[220vh]"
       >
         {/* Left pinned image */}
         <div className="flex-1 flex justify-center">
@@ -73,12 +76,27 @@ export default function OurPartner() {
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeIndex}
-                src={partnershipItems[activeIndex].image}
-                alt={partnershipItems[activeIndex].title}
+                src={
+                  activeIndex >= 0
+                    ? partnershipItems[activeIndex].image
+                    : partnershipItems[0].image
+                }
+                alt={
+                  activeIndex >= 0
+                    ? partnershipItems[activeIndex].title
+                    : partnershipItems[0].title
+                }
                 initial={{ opacity: 0, scale: 1.05, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
+                animate={{
+                  opacity: activeIndex >= 0 ? 1 : 0,
+                  scale: 1,
+                  y: 0,
+                }}
                 exit={{ opacity: 0, scale: 0.98, y: -20 }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                transition={{
+                  duration: 0.6,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </AnimatePresence>
@@ -86,22 +104,22 @@ export default function OurPartner() {
         </div>
 
         {/* Right scroll column */}
-        <div className="w-[677px] flex flex-col ">
+        <div className="w-[677px] flex flex-col">
           {partnershipItems.map((item, index) => (
             <motion.div
               key={index}
+              data-index={index}
+              className="partner-item flex flex-col py-12 px-4"
               initial={{ opacity: 0, y: 5 }}
               animate={{
-                opacity:
-                  activeIndex === index || activeIndex > index ? 1 : 0.25,
+                opacity: activeIndex === index ? 1 : 0.25,
                 y: activeIndex === index ? 0 : 10,
                 scale: activeIndex === index ? 1 : 0.98,
               }}
               transition={{
-                duration: 0.5,
+                duration: 0.7, // slightly slower for smoothness
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col   py-6  md:h-[50vh] px-4"
             >
               <h3 className="text-[20px] md:text-[32px] font-serif text-[#2c2c2c]">
                 {item.title}
@@ -110,7 +128,7 @@ export default function OurPartner() {
                 {item.description}
               </p>
               {index < partnershipItems.length - 1 && (
-                <div className="h-[1px] bg-gray-200 " />
+                <div className="h-[1px] bg-gray-200" />
               )}
             </motion.div>
           ))}

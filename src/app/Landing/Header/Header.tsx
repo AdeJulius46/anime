@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <>
       {/* HEADER */}
-      <header className="fixed top-0 w-[95%] md:w-full h-[58px] z-[50] flex justify-end" id="white-section">
+      <header className="fixed top-0 w-full h-[58px] z-[50] flex justify-end" id="white-section">
         <div className="w-full flex justify-end backdrop-blur-[21px] bg-[linear-gradient(135deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0)_100%)]">
           <Button
             variant="ghost"

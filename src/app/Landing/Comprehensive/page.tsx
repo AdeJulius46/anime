@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { useInView, motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 
 const supportServices = [
   {
@@ -90,7 +91,7 @@ const Comprehensive = () => {
                 className={`flex flex-col  border-t border-t-black  md:flex-row  py-6`}
               >
                 {/* Text Section */}
-                <div className="flex-1  gap-2   flex md:items-start text-center md:text-left space-y-4">
+                <div className="flex-1  gap-4   flex md:items-start text-center md:text-left space-y-4">
                   <span className="font-['Sora'] text-[#2c2c2c] text-2xl">
                     {service.number}
                   </span> 
@@ -98,10 +99,12 @@ const Comprehensive = () => {
                   <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[47px] leading-tight">
                     {service.title}
                   </h3>
-                      <motion.p className="text-start  md:mt-10 text-[#2c2c2c] underline text-[16px] md:text-lg font-['Sora'] cursor-pointer">
+                  <Link href="https://docs.google.com/document/d/1UALw-XbJuXYkByPqfzr4aGayja2oPhTbWSv_aQhhDEg/edit?tab=t.0#heading=h.vg62idl7d3v9">
+                    <motion.p className="text-start  md:mt-10 text-[#2c2c2c] underline text-[16px] md:text-lg font-['Sora'] cursor-pointer">
                     {service.subtitle}
                   </motion.p>
-
+                  </Link>
+            
                   </div>
                   
                 </div>
@@ -118,7 +121,7 @@ const Comprehensive = () => {
         </div>
 
         {/* Footer text */}
-        <p className="mt-10 text-center  text-[#2c2c2c]text-[13px]  md:text-[18px] font-['Sora'] cursor-pointer">
+        <p className="mt-10 text-center  text-black text-[13px]  md:text-[18px] font-['Sora'] cursor-pointer">
           If you need information or support, reach out,
         </p>
         <motion.p className="text-center font-['DM_Serif_Text'] text-[#2c2c2c] text-[24px] md:text-[32px] max-w-3xl">
