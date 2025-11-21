@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { useInView, motion, useScroll, useTransform } from "framer-motion";
-import { Subtitles } from "lucide-react";
+import Link from "next/link";
 
 const supportServices = [
   {
@@ -119,7 +119,7 @@ const Support = () => {
         </motion.p>
 
         <motion.p className="mt-10 text-[#2c2c2c] underline text-lg font-['Sora'] cursor-pointer">
-          View Resource
+          <Link href="https://docs.google.com/document/d/1UALw-XbJuXYkByPqfzr4aGayja2oPhTbWSv_aQhhDEg/edit?tab=t.0#heading=h.vg62idl7d3v9">View Resource</Link>
         </motion.p>
       </section>
     </div>
