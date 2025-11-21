@@ -17,7 +17,7 @@ function Activenews() {
                 </div>
                 <div className='flex flex-col gap-2'>
                     <img  src="/Frame.png"/>
-                    <Link href="https://www.powelltribune.com/stories/of-course-i-said-no,171151">
+                    <Link href="https://www.powelltribune.com/stories/a-helping-hand-up-to-start-again-jackie-fales,168499">
                     <p className='font-[600] text-black  md:text-[20px] underline  cursor-pointer'>A helping hand up to start again: <br/>  Jackie Fales</p>
                     </Link>
                 </div>
