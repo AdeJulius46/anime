@@ -53,7 +53,7 @@ export default function OurPartner() {
 
   return (
     <section
-      id="white-section Our-Strategic-Partnership"
+      id="Advocating-for-Change"
       className="relative w-full bg-white flex flex-col items-center md:py-16"
     >
       <h2 className="text-[32px] w-64 mt-[20px] md:w-full md:text-[56px] font-serif text-[#2D2D2D] text-center mb-16">
@@ -62,7 +62,7 @@ export default function OurPartner() {
 
       <div
         ref={containerRef}
-        className="relative flex w-full max-w-[1352px] gap-[46px] md:min-h-[110vh]"
+        className="relative flex w-full max-w-[1352px] gap-[46px]  min-h-[60vh] md:min-h-[110vh]"
       >
         {/* Left pinned image */}
         <div className="flex-1 flex justify-center">
@@ -96,7 +96,7 @@ export default function OurPartner() {
             <motion.div
               key={index}
               data-index={index}
-              className="partner-item flex flex-col py-12 px-4"
+              className="partner-item flex flex-col py-8  md:py-12 px-4"
               initial={{ opacity: 0, y: 5 }}
               animate={{
                 opacity: activeIndex === index ? 1 : 0.25,
