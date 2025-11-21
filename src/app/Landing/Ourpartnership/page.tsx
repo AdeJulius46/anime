@@ -71,7 +71,7 @@ export default function OurPartner() {
 
       <div
         ref={containerRef}
-        className="relative flex w-full max-w-[1352px] gap-[46px] md:min-h-[220vh]"
+        className="relative flex w-full max-w-[1352px] gap-[46px] md:min-h-[140vh]"
       >
         {/* Left pinned image */}
         <div className="flex-1 flex justify-center">

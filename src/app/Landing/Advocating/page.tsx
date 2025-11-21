@@ -22,17 +22,11 @@ const partnershipItems = [
       "Engaging communities across Wyoming to support recovery initiatives and create welcoming environments for those in recovery. ",
     image: "/Frame14(8).png",
   },
-  {
-    title: "Community Mobilization",
-    description:
-      "Engaging communities across Wyoming to support recovery initiatives and create welcoming environments for those in recovery. ",
-    image: "/Frame14(8).png",
-  },
 ];
 
 export default function OurPartner() {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [activeIndex, setActiveIndex] = useState(-1); // start inactive
+  const [activeIndex, setActiveIndex] = useState(0); // start inactive
 
   // IntersectionObserver to trigger image change only when item fully in view
   useEffect(() => {
@@ -68,7 +62,7 @@ export default function OurPartner() {
 
       <div
         ref={containerRef}
-        className="relative flex w-full max-w-[1352px] gap-[46px] md:min-h-[220vh]"
+        className="relative flex w-full max-w-[1352px] gap-[46px] md:min-h-[110vh]"
       >
         {/* Left pinned image */}
         <div className="flex-1 flex justify-center">
@@ -76,16 +70,9 @@ export default function OurPartner() {
             <AnimatePresence mode="wait">
               <motion.img
                 key={activeIndex}
-                src={
-                  activeIndex >= 0
-                    ? partnershipItems[activeIndex].image
-                    : partnershipItems[0].image
-                }
-                alt={
-                  activeIndex >= 0
-                    ? partnershipItems[activeIndex].title
-                    : partnershipItems[0].title
-                }
+                src={partnershipItems[activeIndex]?.image ?? partnershipItems[0].image}
+
+                alt={partnershipItems[activeIndex]?.title ?? partnershipItems[0].title}
                 initial={{ opacity: 0, scale: 1.05, y: 20 }}
                 animate={{
                   opacity: activeIndex >= 0 ? 1 : 0,
