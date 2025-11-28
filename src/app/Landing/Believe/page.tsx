@@ -37,7 +37,7 @@ const Believe = () => {
         </motion.p>
                 <div className='flex justify-center mt-1'>
             <Link className='items-center'   href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
-                  <button className="bg-black text-white px-12  text-[18px] font-[400] py-3 ">
+                  <button className="bg-black text-white px-12  text-[18px] font-[400] py-3  cursor-pointer">
                     Donate
                   </button>  
                       </Link>

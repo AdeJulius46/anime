@@ -5,7 +5,7 @@ import React, { useRef, useState, useEffect } from "react";
 
 const partnershipItems = [
   {
-    title: "Treatment Facilities",
+    title: "Treatment Faculties",
     description:
       "Creating seamless referral pathways with rehab centers and mental health facilities across Wyoming.",
     image: "/Frame 14.png",

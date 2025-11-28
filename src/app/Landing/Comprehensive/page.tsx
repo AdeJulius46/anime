@@ -67,7 +67,7 @@ const Comprehensive = () => {
         >Navigating the path to recovery can be overwhelming. Active in Recovery provides comprehensive services accessible throughout Wyoming, ensuring that help is always within reach—no matter where someone is in the state.
         </motion.p>
             <Link href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
-        <button className="bg-black text-white px-12  text-[18px] font-[400] py-3 ">
+        <button className="bg-black text-white px-12  text-[18px] font-[400] py-3 cursor-pointer ">
           Donate
         </button>  
             </Link>
@@ -132,12 +132,11 @@ const Comprehensive = () => {
           air.activeinrecovery@gmail.com 
         </motion.p>
         <motion.p className="text-center mt-4 font-['DM_Serif_Text'] text-[#2c2c2c] text-[24px] md:text-[32px] max-w-3xl">
-          Support services are designed to complement each other, creating a
-          continuum of care that evolves with individuals’ changing needs.
+       Support services are built to work together, providing continuous care that adapts as each person’s recovery journey grows and changes.
         </motion.p>
 
           <Link href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
-        <button className="bg-black text-white px-12  text-[18px] font-[400] py-3  mt-6">
+        <button className="bg-black text-white px-12  text-[18px] font-[400] py-3  mt-6  cursor-pointer">
           Donate
         </button>  
             </Link>

@@ -106,11 +106,11 @@ function OurMission() {
                   />
 
                   {/* Floating icon */}
-                  <img
+                  {/* <img
                     src={item.iconSrc}
                     alt={`${item.title} icon`}
                     className="hidden md:block absolute bottom-[-10px] left-[-375px] w-[316px] h-[246px] object-contain"
-                  />
+                  /> */}
                 </div>
               </div>
             );
