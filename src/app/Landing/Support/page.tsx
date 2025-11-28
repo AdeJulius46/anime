@@ -113,14 +113,16 @@ const Support = () => {
         </div>
 
         {/* Footer text */}
-        <motion.p className="text-center mt-24 font-['DM_Serif_Text'] text-[#2c2c2c] text-[24px] md:text-[32px] max-w-3xl">
-          Support services are designed to complement each other, creating a
-          continuum of care that evolves with individuals’ changing needs.
+        <motion.p className="text-center mt-24 font-['Sora'] text-[#2c2c2c] text-[14px] md:text-[18px] max-w-3xl">
+       Support from individuals and organizations across Wyoming enables us to reach more people in need and expand our services into underserved communities. Every contribution, whether time, money, or advocacy, builds a stronger foundation for those seeking recovery. 
         </motion.p>
 
-        <motion.p className="mt-10 text-[#2c2c2c] underline text-lg font-['Sora'] cursor-pointer">
-          <Link href="https://docs.google.com/document/d/1UALw-XbJuXYkByPqfzr4aGayja2oPhTbWSv_aQhhDEg/edit?tab=t.0#heading=h.vg62idl7d3v9">View Resource</Link>
-        </motion.p>
+           <Link  className="mt-6   " href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
+                <button className="bg-black text-white px-12  text-[18px] font-[400] py-3">
+                  Donate
+                </button>  
+                    </Link>
+
       </section>
     </div>
   );

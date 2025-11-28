@@ -26,6 +26,14 @@ function Activenews() {
             <p className='md:w-6xl px-4 text-center  text-black'>
                 The impact of our advocacy extends beyond policy changes. Through engagement with decision-makers and strategic coalition building, we're creating a Wyoming where recovery is not just possible but fully supported by our systems, policies, and communities.
             </p>
+
+
+
+              <Link href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
+                    <button className="bg-black text-white px-12  text-[18px] font-[400] py-3 ">
+                      Donate
+                    </button>  
+                        </Link>
         </div>
     </div>
   )

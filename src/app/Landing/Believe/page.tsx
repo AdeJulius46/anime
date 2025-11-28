@@ -1,6 +1,8 @@
 "use client"
 import { useRef } from 'react'
 import { useInView, motion,useScroll,useTransform} from 'framer-motion'
+import Link from 'next/link'
+
 const Believe = () => {
  const ref = useRef(null)
 
@@ -33,7 +35,16 @@ const Believe = () => {
          We believe that addressing substance abuse and mental health challenges requires a collaborative approach. By forging strong partnerships with healthcare systems, government agencies, and community organizations, 
          we're building a robust network of support that spans the entire state of Wyoming.
         </motion.p>
+                <div className='flex justify-center mt-1'>
+            <Link className='items-center'   href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
+                  <button className="bg-black text-white px-12  text-[18px] font-[400] py-3 ">
+                    Donate
+                  </button>  
+                      </Link>
+                </div>
+
         < motion.div
+        className='mt-[20px]'
         
         >
             <motion.img  

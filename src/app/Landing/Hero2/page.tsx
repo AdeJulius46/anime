@@ -27,7 +27,7 @@ const { scrollYProgress } = useScroll({
       <div className=" flex flex-col items-center justify-end    md:justify-center text-center text-white  mt-[550px] md:mt-[390px]  md:px-[45px]  ">
         <h3 className="font-[400] text-[16px]   [font-family:'Sora',Helvetica]   w-64 md:w-full  md:text-[24px] "     
         >
-          Empowering individuals to reduce stigma and build a stronger.
+          Empowering individuals to reduce stigma and build a stronger WYOMING.
         </h3>
         <h1 className="text-[60px] z-10 mt-[40px] font-[400] md:mt-[0] leading-none text-center  md:leading-[1.5] font-serif  uppercase md:text-[126px] "
         

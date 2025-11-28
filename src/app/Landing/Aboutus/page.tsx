@@ -41,11 +41,7 @@ const About = () => {
       }}
         
         className="h-[92px] md:w-[800px] text-[14px] px-8 text-start md:text-center  md:text-[18px] self-center mt-2.5  px-4 mb-[60px] [font-family:'Sora',Helvetica] font-[400] text-[#2D2D2D] text-lg text-center tracking-[0] leading-[normal]">
-          Since our founding, we've been dedicated to bridging the gap between
-          those struggling with addiction and the life-changing resources that
-          can help them heal. Our statewide network of resources and recovery
-          specialists, counselors, and peer support advocates, work tirelessly
-          to ensure no Wyoming resident faces these challenges alone.
+         Since its founding in 2023, Active in Recovery has been dedicated to bridging the gap between those struggling with addiction and the life-changing resources that support healing. Through a statewide network of recovery specialists, counselors, and peer support advocates, the organization works tirelessly to ensure no Wyoming resident faces these challenges alone.
         </motion.p>
         < motion.div
         
@@ -70,10 +66,7 @@ const About = () => {
          ease: "easeInOut"    // smooth easing
       }}
         className="  md:px-4 text-[14px] px-8 text-start md:text-center  md:text-[18px] h-[68px] md:w-[852px] self-center mt-[40px] md:mt-[110px]   md:mb-[40px] [font-family:'Sora',Helvetica] font-normal text-[#2c2c2c] text-lg text-center tracking-[0] leading-[normal]">
-          We understand that recovery isn't just about overcoming addiction—it's
-          about rebuilding lives, restoring families, and strengthening
-          communities. We're committed to making recovery accessible to
-          everyone, regardless of location, financial situation, or background.
+ Recovery is not just about overcoming addiction- it’s about rebuilding lives, restoring families, and strengthening communities. The mission is to make recovery accessible to everyone, regardless of location, financial situation, or background.
         </motion.p>
 
 

@@ -35,7 +35,7 @@ const Hero = () => {
          ease: "easeInOut"    // smooth easing
       }}        
         >
-          Empowering individuals to reduce stigma and build a stronger.
+          Empowering individuals to reduce stigma and build a stronger WYOMING.
         </motion.h3>
         
         <motion.h1 className="text-[60px] mt-[40px] font-[400] md:mt-[0] leading-none text-center  md:leading-[1.5] font-serif  uppercase md:text-[126px]"

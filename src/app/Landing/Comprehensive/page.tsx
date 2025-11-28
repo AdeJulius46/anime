@@ -63,10 +63,14 @@ const Comprehensive = () => {
          duration: 1,                     // fade in over 1 second
          ease: "easeInOut"    // smooth easing
       }}
-          className="  [font-family:'Sora',Helvetica] text-[14px]  text-[#2c2c2c] md:text-[18px] text-base md:text-lg max-w-2xl mb-16"
-        >
-          Navigating the path to recovery can be overwhelming. Active in Recovery provides comprehensive services accessible throughout Wyoming, ensuring that help is always within reach—no matter where someone is in the state.
+          className="  [font-family:'Sora',Helvetica] text-[14px]  text-[#2c2c2c] md:text-[18px] text-base md:text-lg max-w-3xl mb-5"
+        >Navigating the path to recovery can be overwhelming. Active in Recovery provides comprehensive services accessible throughout Wyoming, ensuring that help is always within reach—no matter where someone is in the state.
         </motion.p>
+            <Link href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
+        <button className="bg-black text-white px-12  text-[18px] font-[400] py-3 ">
+          Donate
+        </button>  
+            </Link>
 
         {/* Services */}
         <div className="flex flex-col w-full  ">
@@ -99,7 +103,7 @@ const Comprehensive = () => {
                   <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[47px] leading-tight">
                     {service.title}
                   </h3>
-                  <Link href="https://docs.google.com/document/d/1UALw-XbJuXYkByPqfzr4aGayja2oPhTbWSv_aQhhDEg/edit?tab=t.0#heading=h.vg62idl7d3v9">
+                  <Link href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
                     <motion.p className="text-start  md:mt-10 text-[#2c2c2c] underline text-[16px] md:text-lg font-['Sora'] cursor-pointer">
                     {service.subtitle}
                   </motion.p>
@@ -131,6 +135,13 @@ const Comprehensive = () => {
           Support services are designed to complement each other, creating a
           continuum of care that evolves with individuals’ changing needs.
         </motion.p>
+
+          <Link href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
+        <button className="bg-black text-white px-12  text-[18px] font-[400] py-3  mt-6">
+          Donate
+        </button>  
+            </Link>
+
       </section>
     </div>
   );
