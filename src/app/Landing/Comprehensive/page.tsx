@@ -103,7 +103,7 @@ const Comprehensive = () => {
                   <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[47px] leading-tight">
                     {service.title}
                   </h3>
-                  <Link href="https://www.paypal.com/donate?token=SmRo4QGVd-pjINY13CnC5PsDFPSgbNXrpsIIHDcplmeG5KxWbHND0UUbLQGc7RISRbj86oSkCZkxpLkX">
+                  <Link href="https://docs.google.com/document/d/1UALw-XbJuXYkByPqfzr4aGayja2oPhTbWSv_aQhhDEg/edit?tab=t.0#heading=h.vg62idl7d3v9">
                     <motion.p className="text-start  md:mt-10 text-[#2c2c2c] underline text-[16px] md:text-lg font-['Sora'] cursor-pointer">
                     {service.subtitle}
                   </motion.p>
