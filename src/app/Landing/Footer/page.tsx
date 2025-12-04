@@ -53,10 +53,10 @@ function Footer() {
       }}
         className=' px-8 md:px-0  gap-2  mt-[20px] md:mt-[40px]'>
         <p className="[font-family:'Sora',Helvetica] text-white text-[14px] md:text-lg text-center tracking-[0] leading-[normal]">
-            To discuss how you can get involved in ways that match your interests
+          We’re grateful to walk this road with you- Wyoming spirit
             </p>
         <p className=" [font-family:'Sora',Helvetica]  text-[14px] md:text-lg  [font-family:'Sora',Helvetica] font-normal text-white text-lg text-center tracking-[0] leading-[normal]">
-          We're grateful for your partnership in this important work.
+         and straight-shooting support included.
         </p>
         </motion.div>
       </motion.footer>
