@@ -66,7 +66,7 @@ const Comprehensive = () => {
           className="  [font-family:'Sora',Helvetica] text-[14px]  text-[#2c2c2c] md:text-[18px] text-base md:text-lg max-w-3xl mb-5"
         >Navigating the path to recovery can be overwhelming. Active in Recovery provides comprehensive services accessible throughout Wyoming, ensuring that help is always within reach—no matter where someone is in the state.
         </motion.p>
-            <Link href="https://www.paypal.com/donate?token=TjsTRkz1xqnD1HI34RA80yIbnp-NP2pa8tcZ9BqBjQ7z6HDpvU700OyVauYN_zStfrmg81yPVcxCCaXW">
+            <Link href="https://www.paypal.com/donate/?hosted_button_id=3QFXZYJ45DZLA">
         <button className="bg-black text-white px-12  text-[18px] font-[400] py-3 cursor-pointer ">
           Donate
         </button>  
@@ -135,7 +135,7 @@ const Comprehensive = () => {
        Support services are built to work together, providing continuous care that adapts as each person’s recovery journey grows and changes.
         </motion.p>
 
-          <Link href="https://www.paypal.com/donate?token=TjsTRkz1xqnD1HI34RA80yIbnp-NP2pa8tcZ9BqBjQ7z6HDpvU700OyVauYN_zStfrmg81yPVcxCCaXW">
+          <Link href="https://www.paypal.com/donate/?hosted_button_id=3QFXZYJ45DZLA">
         <button className="bg-black text-white px-12  text-[18px] font-[400] py-3  mt-6  cursor-pointer">
           Donate
         </button>  

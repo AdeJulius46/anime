@@ -110,7 +110,7 @@ const Support = () => {
                     {service.Subtitles}
                   </p>
                    {index === 0 && service.contributions && (
-                      <Link className="md:px-8" href="https://www.paypal.com/donate?token=TjsTRkz1xqnD1HI34RA80yIbnp-NP2pa8tcZ9BqBjQ7z6HDpvU700OyVauYN_zStfrmg81yPVcxCCaXW">
+                      <Link className="md:px-8" href="https://www.paypal.com/donate/?hosted_button_id=3QFXZYJ45DZLA">
                         <button className="bg-black text-white px-12 text-[18px] font-[400] py-3 cursor-pointer">
                           {service.contributions}
                         </button>

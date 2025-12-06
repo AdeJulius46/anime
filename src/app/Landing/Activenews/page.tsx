@@ -29,7 +29,7 @@ function Activenews() {
 
 
 
-              <Link href="https://www.paypal.com/donate?token=TjsTRkz1xqnD1HI34RA80yIbnp-NP2pa8tcZ9BqBjQ7z6HDpvU700OyVauYN_zStfrmg81yPVcxCCaXW">
+              <Link href="https://www.paypal.com/donate/?hosted_button_id=3QFXZYJ45DZLA">
                     <button className="bg-black text-white px-12  text-[18px] font-[400] py-3  cursor-pointer">
                       Donate
                     </button>  
