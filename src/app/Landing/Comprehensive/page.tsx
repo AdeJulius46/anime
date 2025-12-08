@@ -129,7 +129,7 @@ const Comprehensive = () => {
           If you need information or support, reach out,
         </p>
         <motion.p className="text-center font-['DM_Serif_Text'] text-[#2c2c2c] text-[24px] md:text-[32px] max-w-3xl">
-          air.activeinrecovery@gmail.com 
+            info@activeinrecovery.org
         </motion.p>
         <motion.p className="text-center mt-4 font-['DM_Serif_Text'] text-[#2c2c2c] text-[24px] md:text-[32px] max-w-3xl">
        Support services are built to work together, providing continuous care that adapts as each person’s recovery journey grows and changes.

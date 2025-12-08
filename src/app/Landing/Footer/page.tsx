@@ -29,7 +29,7 @@ function Footer() {
          ease: "easeInOut"    // smooth easing
       }}
         className="  font-normal text-white text-lg text-center tracking-[0] leading-[normal]">
-          Contact our development coordinator
+         Questions or want to learn more? Email
         </motion.p>
 
         <motion.p
@@ -41,7 +41,7 @@ function Footer() {
          ease: "easeInOut"    // smooth easing
       }}
         className='px-8  font-normal text-white text-[21px] md:text-[32px] text-center tracking-[0] leading-[normal]'>
-            air.activeinrecovery@gmail.com
+          info@activeinrecovery.org
         </motion.p>
         <motion.div 
           initial={{ opacity: 0  }} // starts lower and invisible
