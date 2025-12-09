@@ -26,7 +26,7 @@ const partnershipItems = [
     title: "Government Agencies",
     description:
       "Collaborating with state and local agencies to improve access to services for all Wyoming residents.",
-       image: "/Frame14(5).png",
+       image: "/Frame 60.png",
    
   },
 ];
