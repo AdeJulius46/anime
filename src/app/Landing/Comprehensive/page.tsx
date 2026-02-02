@@ -6,21 +6,24 @@ import Link from "next/link";
 const supportServices = [
   {
     number: "01",
-    title: "Resource Database",
+    title: "Resources",
     subtitle:"View resources",
     imageSrc: "Frame 10.png",
+    link:"/Resources"
   },
   {
     number: "02",
     title: "Peer Support",
       subtitle:"View resources",
     imageSrc: "Frame 11.png",
+     link:"https://docs.google.com/document/d/1UALw-XbJuXYkByPqfzr4aGayja2oPhTbWSv_aQhhDEg/edit?tab=t.0#heading=h.vg62idl7d3v9"
   },
   {
     number: "03",
     title: "Educational Resources",
     subtitle:"View resources",
     imageSrc: "Frame 12.png",
+     link:"https://docs.google.com/document/d/1UALw-XbJuXYkByPqfzr4aGayja2oPhTbWSv_aQhhDEg/edit?tab=t.0#heading=h.vg62idl7d3v9"
   },
 ];
 
@@ -103,7 +106,7 @@ const Comprehensive = () => {
                   <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[47px] leading-tight">
                     {service.title}
                   </h3>
-                  <Link href="https://docs.google.com/document/d/1UALw-XbJuXYkByPqfzr4aGayja2oPhTbWSv_aQhhDEg/edit?tab=t.0#heading=h.vg62idl7d3v9">
+                  <Link href={service.link}>
                     <motion.p className="text-start  md:mt-10 text-[#2c2c2c] underline text-[16px] md:text-lg font-['Sora'] cursor-pointer">
                     {service.subtitle}
                   </motion.p>
