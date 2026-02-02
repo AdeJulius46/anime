@@ -30,7 +30,20 @@ const { scrollYProgress } = useScroll({
         
         >Resources</h1>
 
+         <motion.button className="font-[400] text-[16px]  bg-white border border-red  text-black  font-serif px-4 py-3 w-auto md:text-[18px]  cursor-pointer mt-10 z-10 "
+                initial={{ opacity: 0  }} // starts lower and invisible
+              animate={{ opacity: 1, y:5}}  // fades in and slides up
+              transition={{
+                 delay: 2,                        // ⏳ wait 3 seconds before starting
+                 duration: 2,                     // fade in over 1 second
+                 ease: "easeInOut"    // smooth easing
+              }}        
+                >
+                  View Online Resources
+                </motion.button>
+
       </div>
+
 
     <div className="el z-20">
         <motion.div 
@@ -45,6 +58,7 @@ const { scrollYProgress } = useScroll({
                 </h1>
 
             </div>
+            
         {/* <Image src="/Frame3.png" alt="Landing Image" layout="fill"   /> */}
         </motion.div>
     </div>
