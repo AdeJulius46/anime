@@ -8,14 +8,14 @@ const supportServices = [
   {
     title: "Addiction Severity Index",
     subtitle:"Click here for assistance",
-    imageSrc: "Frame90.png",
+    imageSrc:"Frame90.png",
     link:"/Resources",
      extras:""
   },
   {
     title: "Community Service Block Grantt",
       subtitle:"Click here for assistance",
-    imageSrc: "Frame98.png",
+    imageSrc:"Frame98.png",
     link:"/Resources",
     extras:""
   },
@@ -67,13 +67,13 @@ const Compre = () => {
                 className={`flex flex-col   md:flex-row `}
               >
                 {/* Text Section */}
-                <div className="flex-1  gap-4  p flex md:items-start text-center md:text-left space-y-4 ">
-                  <div className="flex flex-col gap-3 md:gap-0 py-3">
+                <div className="flex-1  gap-4  p flex items-start text-center md:text-left space-y-4 ">
+                  <div className="flex flex-col  text-start  gap-3 md:gap-0 py-3">
                   <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[47px] leading-tight">
                     {service.title}
                   </h3>
                   <Link href={service.link}>
-                    <motion.button className="text-start  md:mt-10 text-white bg-black   text-[16px] md:text-lg font-['Sora'] cursor-pointer px-2 py-2">
+                    <motion.button className="text-start  md:mt-10 text-white bg-black   text-[16px] md:text-lg font-['Sora'] cursor-pointer  px-2 py-2">
                     {service.subtitle}
                   </motion.button>
                   </Link>
