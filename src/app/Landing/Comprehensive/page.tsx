@@ -113,11 +113,11 @@ const Comprehensive = () => {
                   <h3 className="font-serif font-[400]  text-[#2c2c2c] text-[20px] md:text-[32px] leading-tight">
                     {service.title}
                   </h3>
-                  <Link href={service.link}>
+                  <a href={service.link}>
                      <motion.button className="text-start  md:mt-10 text-white bg-black   text-[16px] md:text-lg font-['Sora'] cursor-pointer  px-2 py-2">
                      {service.subtitle}
                    </motion.button>
-                   </Link>
+                   </a>
             
                   </div>
                   
