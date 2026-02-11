@@ -15,14 +15,14 @@ const supportServices = [
     title: "Addiction Severity Indext",
       subtitle:"Click here for assistance",
     imageSrc:"Frame98.png",
-    link:"mailto:adegokejulius46@gmail.com",
+    link:"mailto:info@activeinrecovery.org",
     extras:""
   },
   {
     title: "Community Service Block Grantt",
       subtitle:"Click here for assistance",
     imageSrc:"Frame98.png",
-    link:"mailto:adegokejulius46@gmail.com",
+    link:"mailto:info@activeinrecovery.org",
     extras:""
   },
   {
@@ -118,6 +118,9 @@ const Comprehensive = () => {
                      {service.subtitle}
                    </motion.button>
                    </a>
+                    <h3 className="text-[#2c2c2c] text-[16px] md:text-lg font-['Sora'] mt-4">
+                    {service.extras}
+                  </h3>
             
                   </div>
                   
