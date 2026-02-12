@@ -19,7 +19,7 @@ const supportServices = [
     extras:""
   },
   {
-    title: "Community Service Block Grantt",
+    title: "Community Service Block Grant",
       subtitle:"Click here for assistance",
     imageSrc:"Frame98.png",
     link:"mailto:info@activeinrecovery.org",
