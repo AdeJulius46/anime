@@ -97,6 +97,7 @@ const Header = () => {
                 <a href="#Our-Mission" onClick={(e) => handleSectionNavigation(e, "Our-Mission")}>Our Mission & Vision</a>
                 <a href="#Comprehensive-Support" onClick={(e) => handleSectionNavigation(e, "Comprehensive-Support")}>Comprehensive Support Services</a>
                 <a href="#Our-Strategic-Partnership" onClick={(e) => handleSectionNavigation(e, "Our-Strategic-Partnership")}>Our Strategic Partnership</a>
+                <a href="/Resources" onClick={() => setMenuOpen(false)}>Resource</a>
                 <a href="#Advocating-for-Change" onClick={(e) => handleSectionNavigation(e, "Advocating-for-Change")}>Advocating for Change</a>
                 <a href="#How-you-can-Support-our-Work" onClick={(e) => handleSectionNavigation(e, "How-you-can-Support-our-Work")}>How you can Support our Work</a>
                 <a href="#Our-Strategic-Partnership" onClick={(e) => handleSectionNavigation(e, "Our-Strategic-Partnership")}>Our Strategic Partnership</a>
