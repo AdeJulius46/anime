@@ -9,14 +9,14 @@ const supportServices = [
     title: "Addiction Severity Index",
     subtitle:"Click here for assistance",
     imageSrc:"Frame90.png",
-    link:"/Resources",
+    link:"mailto:info@activeinrecovery.org",
      extras:""
   },
   {
     title: "Community Service Block Grantt",
       subtitle:"Click here for assistance",
     imageSrc:"Frame98.png",
-    link:"/Resources",
+    link:"mailto:info@activeinrecovery.org",
     extras:""
   },
   {

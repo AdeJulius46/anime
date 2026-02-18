@@ -50,7 +50,7 @@ const Hero3 = () => {
         
         >Resources</motion.h1>
         
-         <motion.button className="font-[400] text-[16px]  bg-white border border-red  text-black  font-serif px-4 py-3 w-auto md:text-[18px]  cursor-pointer mt-10 z-10 "
+         {/* <motion.button className="font-[400] text-[16px]  bg-white border border-red  text-black  font-serif px-4 py-3 w-auto md:text-[18px]  cursor-pointer mt-10 z-10 "
                         initial={{ opacity: 0  }} // starts lower and invisible
                       animate={{ opacity: 1, y:5}}  // fades in and slides up
                       transition={{
@@ -60,7 +60,7 @@ const Hero3 = () => {
                       }}        
                         >
                           View Online Resources
-                        </motion.button>
+                        </motion.button> */}
 
       </div>
     </motion.section>
