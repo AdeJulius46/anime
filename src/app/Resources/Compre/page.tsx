@@ -7,13 +7,13 @@ import { link } from "fs";
 const supportServices = [
   {
     title: "Addiction Severity Index",
-    subtitle:"Click here for assistance",
+    subtitle:"Click here to access resources",
     imageSrc:"Frame90.png",
     link:"mailto:info@activeinrecovery.org",
      extras:""
   },
   {
-    title: "Community Service Block Grantt",
+    title: "Community Service Block Grant",
       subtitle:"Click here for assistance",
     imageSrc:"Frame98.png",
     link:"mailto:info@activeinrecovery.org",
@@ -21,7 +21,7 @@ const supportServices = [
   },
   {
     title: "Jeff Smith Outdoorsman Fund ",
-    subtitle:"Click here for assistance",
+    subtitle:"Click here to apply",
     extras:"The Jeff Smith Outdoorsman Fund honors the life of Jeff Smith, an avid outdoorsman who found peace, connection, and joy in the Rocky Mountain outdoors. After losing his battle with alcohol addiction, this fund was created in his memory to help others in recovery experience the healing power of nature and movement.  The fund provides financial support for individuals in recovery to participate in outdoor activities, sports, and community events throughout the Rocky Mountain region. By removing financial barriers, the Jeff Smith Outdoorsman Fund encourages active, meaningful connection and supports recovery beyond abstinence.  If you are active in recovery and would benefit from support to participate in outdoor or recreational activities, we encourage you to apply.",
     imageSrc:"legish.jpeg",
     link:"https://docs.google.com/forms/d/e/1FAIpQLSc3rmQssuSKIuyBpcU2isPn1kjzLYjDXebGJcedgR4dOSwltA/viewform"
