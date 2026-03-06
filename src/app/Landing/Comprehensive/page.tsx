@@ -7,21 +7,21 @@ const supportServices = [
     {
     title: "Park County Substance Use Resource Guide",
     subtitle:"Click here to access guide",
-    imageSrc:"Frame90.png",
+    imageSrc:"chris.jpeg",
     link:"https://docs.google.com/document/d/1UALw-XbJuXYkByPqfzr4aGayja2oPhTbWSv_aQhhDEg/edit?tab=t.0#heading=h.vg62idl7d3v9s",
      extras:""
   },
   {
     title: "Addiction Severity Indext",
       subtitle:"Click here to access resources",
-    imageSrc:"Frame98.png",
+    imageSrc:"chris2.jpeg",
     link:"mailto:info@activeinrecovery.org",
     extras:""
   },
   {
     title: "Community Service Block Grant",
       subtitle:"Click here to access resources",
-    imageSrc:"Frame98.png",
+    imageSrc:"chris3jpeg.jpeg",
     link:"mailto:info@activeinrecovery.org",
     extras:""
   },
