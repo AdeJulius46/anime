@@ -12,7 +12,7 @@ const supportServices = [
      extras:""
   },
   {
-    title: "Addiction Severity Indext",
+    title: "Addiction Severity Index",
       subtitle:"Click here to access resources",
     imageSrc:"chris2.jpeg",
     link:"mailto:info@activeinrecovery.org",
